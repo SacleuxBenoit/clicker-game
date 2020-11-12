@@ -17,5 +17,16 @@
             <li>Sort 4</li>
         </ul>
     </nav>
+
+    <div class="pnj">
+
+        <p id="zone">Zone</p>
+        <p id="nextZone">Mobs left for the next zone</p>
+
+        <button id="buttonPnj">Pnj</button>
+
+        <p id="lifeBar">lifeBar</p>
+
+    </div>
 </body>
 </html>
