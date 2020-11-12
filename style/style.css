@@ -1,0 +1,9 @@
+ul{
+    list-style-type: none;
+  }
+
+  li{
+    border-top: 1px solid black;
+    height: 2em;
+    width: 15em;
+  }
