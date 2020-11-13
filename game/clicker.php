@@ -7,9 +7,12 @@
     <title>Clicker game</title>
 </head>
 <body>
-    <h1>Clicker game</h1>
 
-    <nav>
+    <header>
+        <h1>Clicker game</h1>
+    </header>
+
+    <nav class="navDamage">
         <ul>
             <li>Sort 1</li>
             <li>Sort 2</li>

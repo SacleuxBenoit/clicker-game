@@ -1,9 +1,32 @@
+body{
+  margin: 0;
+  display: grid;
+  grid-template-areas: 
+  ". header . "
+  "navDamage pnj . ";
+}
+
 ul{
     list-style-type: none;
-  }
+}
 
-  li{
+li{
     border-top: 1px solid black;
     height: 5em;
     width: 15em;
-  }
+}
+
+header{
+    grid-area: header;
+    background-color: blue;
+}
+
+.navDamage{
+    grid-area: navDamage;
+    background-color: red;
+}
+
+.pnj{
+    grid-area: pnj;
+  background-color: purple;
+}
