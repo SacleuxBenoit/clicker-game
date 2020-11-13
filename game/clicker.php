@@ -21,12 +21,12 @@
         </ul>
     </nav>
 
-    <div class="pnj">
+    <div class="npc">
 
         <p id="zone"></p>
         <p id="nextZone">Monster left for the next zone</p>
 
-        <button id="buttonPnj">Pnj</button>
+        <button id="buttonNPC">Pnj</button>
 
         <p id="lifeBar">lifeBar</p>
 

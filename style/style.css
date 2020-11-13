@@ -3,7 +3,7 @@ body{
   display: grid;
   grid-template-areas: 
   ". header . "
-  "navDamage pnj . ";
+  "navDamage npc . ";
 }
 
 ul{
@@ -24,6 +24,6 @@ header{
     grid-area: navDamage;
 }
 
-.pnj{
-    grid-area: pnj;
+.npc{
+    grid-area: npc;
 }
