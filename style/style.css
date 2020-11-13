@@ -18,15 +18,12 @@ li{
 
 header{
     grid-area: header;
-    background-color: blue;
 }
 
 .navDamage{
     grid-area: navDamage;
-    background-color: red;
 }
 
 .pnj{
     grid-area: pnj;
-  background-color: purple;
 }
