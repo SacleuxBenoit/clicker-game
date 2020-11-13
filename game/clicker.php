@@ -23,13 +23,15 @@
 
     <div class="pnj">
 
-        <p id="zone">Zone</p>
-        <p id="nextZone">Mobs left for the next zone</p>
+        <p id="zone"></p>
+        <p id="nextZone">Monster left for the next zone</p>
 
         <button id="buttonPnj">Pnj</button>
 
         <p id="lifeBar">lifeBar</p>
 
     </div>
+
+    <script src="../javascript/script.js"></script>
 </body>
 </html>
