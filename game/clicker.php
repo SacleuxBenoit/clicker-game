@@ -28,7 +28,7 @@
 
         <button id="buttonNPC">Pnj</button>
 
-        <p id="lifeBar">lifeBar</p>
+        <p id="lifeBar"></p>
 
     </div>
 
