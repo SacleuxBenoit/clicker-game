@@ -26,7 +26,7 @@
         <p id="zone"></p>
         <p id="nextZone">Monster left for the next zone</p>
 
-        <button id="buttonNPC">Pnj</button>
+        <button id="buttonNPC" onclick="damage()">Pnj</button>
 
         <p id="lifeBar"></p>
 
