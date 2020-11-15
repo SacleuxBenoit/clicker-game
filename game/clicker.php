@@ -12,6 +12,8 @@
         <h1>Clicker game</h1>
     </header>
 
+    <p id="goldPlayer">Gold</p>
+    
     <nav class="navDamage">
         <ul>
             <li>Sort 1</li>
@@ -26,7 +28,7 @@
         <p id="zone"></p>
         <p id="nextZone">Monster left for the next zone</p>
 
-        <button id="buttonNPC" onclick="damage()">Pnj</button>
+        <button id="buttonNPC" onclick="damage()">NPC</button>
 
         <p id="lifeBar"></p>
 
