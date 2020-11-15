@@ -2,18 +2,18 @@ let zone = document.getElementById('zone');
 let nextZone = document.getElementById('nextZone');
 let lifeBar = document.getElementById('lifeBar');
 
-// Zone
+// variables : Zone
 
 let currentZone = 1;
 let monster = 0;
 let monstersLeft = 2;
 
-// NPC
+// variables : NPC
 
-let npcLife = 100;
 let npcMaxLife = 100;
+let npcLife = npcMaxLife;
 
-// Player
+// variables : Player
 
 let damagePlayer = 10;
 
@@ -36,6 +36,7 @@ lifeBar.textContent = npcLife + " / " + npcMaxLife;
                 monster++;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 Zone();
+                Reset();
 
         }
 
@@ -43,5 +44,15 @@ lifeBar.textContent = npcLife + " / " + npcMaxLife;
                 if(monster == monstersLeft){
                         currentZone++
                         zone.textContent = "current zone : " + currentZone;
+                }
+        }
+
+        function Reset(){
+                if(monster == monstersLeft){
+                        monster = 0;
+                        nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
+                }
+                if(npcLife == 0){
+                        npcLife = npcMaxLife
                 }
         }
