@@ -52,7 +52,9 @@ lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         monster = 0;
                         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 }
-                if(npcLife == 0){
+                if(npcLife <= 0){
                         npcLife = npcMaxLife
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+
                 }
         }
