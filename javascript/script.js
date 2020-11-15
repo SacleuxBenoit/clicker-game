@@ -19,10 +19,10 @@ let damagePlayer = 10;
 
 zone.textContent = "current zone : " + currentZone;
 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
-lifeBar.textContent = npcLife + " / " + npcMaxLife
+lifeBar.textContent = npcLife + " / " + npcMaxLife;
 
         function damage(){
-                let currentLife =  npcLife -= damagePlayer
+                let currentLife =  npcLife -= damagePlayer;
                 lifeBar.textContent = currentLife + " / " + npcMaxLife;
 
                 if(currentLife <= 0){
@@ -31,6 +31,17 @@ lifeBar.textContent = npcLife + " / " + npcMaxLife
         }
 
         function monsterDead(){
-                currentLife = 0
-                lifeBar.textContent = currentLife + " / " + npcMaxLife 
+                currentLife = 0;
+                lifeBar.textContent = currentLife + " / " + npcMaxLife ;
+                monster++;
+                nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
+                Zone();
+
+        }
+
+        function Zone(){
+                if(monster == monstersLeft){
+                        currentZone++
+                        zone.textContent = "current zone : " + currentZone;
+                }
         }
