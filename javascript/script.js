@@ -21,12 +21,16 @@ zone.textContent = "current zone : " + currentZone;
 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
 lifeBar.textContent = npcLife + " / " + npcMaxLife
 
-function damage(){
-        let currentLife =  npcLife -= damagePlayer
-        lifeBar.textContent = currentLife + " / " + npcMaxLife
+        function damage(){
+                let currentLife =  npcLife -= damagePlayer
+                lifeBar.textContent = currentLife + " / " + npcMaxLife;
 
-        if(currentLife <= 0){
-        currentLife = 0
-        lifeBar.textContent = currentLife + " / " + npcMaxLife
+                if(currentLife <= 0){
+                        monsterDead();
+                }
         }
-}
+
+        function monsterDead(){
+                currentLife = 0
+                lifeBar.textContent = currentLife + " / " + npcMaxLife 
+        }
