@@ -24,4 +24,9 @@ lifeBar.textContent = npcLife + " / " + npcMaxLife
 function damage(){
         let currentLife =  npcLife -= damagePlayer
         lifeBar.textContent = currentLife + " / " + npcMaxLife
+
+        if(currentLife <= 0){
+        currentLife = 0
+        lifeBar.textContent = currentLife + " / " + npcMaxLife
+        }
 }
