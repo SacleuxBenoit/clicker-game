@@ -32,14 +32,19 @@ nextZone.textContent = "Monster left for the next zone : " + monster + " / " + m
 lifeBar.textContent = npcLife + " / " + npcMaxLife;
 goldDisplay.textContent = "Gold : " + gold;
 
-        function damage(){
-                let currentLife =  npcLife -= damagePlayer;
-                lifeBar.textContent = currentLife + " / " + npcMaxLife;
 
-                if(currentLife <= 0){
-                        monsterDead();
+// function Zone
+   
+        function Zone(){
+                if(monster == monstersLeft){
+                currentZone++
+                zone.textContent = "current zone : " + currentZone;
                 }
         }
+
+
+
+// function NPC
 
         function monsterDead(){
                 currentLife = 0;
@@ -48,15 +53,25 @@ goldDisplay.textContent = "Gold : " + gold;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 Zone();
                 Reset();
-
         }
 
-        function Zone(){
-                if(monster == monstersLeft){
-                        currentZone++
-                        zone.textContent = "current zone : " + currentZone;
+// function Player
+
+        function damage(){
+                let currentLife =  npcLife -= damagePlayer;
+                lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                if(currentLife <= 0){
+                        monsterDead();
                 }
         }
+
+        function GoldPlayer(min, max){
+                let random = Math.floor((Math.random() * (max - min) + min));
+                gold += random;
+                goldDisplay.textContent = "Gold : " + gold;
+        }
+
+// function : else
 
         function Reset(){
                 if(monster == monstersLeft){
@@ -66,11 +81,6 @@ goldDisplay.textContent = "Gold : " + gold;
                 if(npcLife <= 0){
                         npcLife = npcMaxLife;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
-                        goldPlayer();
+                        GoldPlayer(1,3);
                 }
-        }
-
-        function GoldPlayer(){
-                gold += 5;
-                goldDisplay.textContent = "Gold : " + gold;
         }
