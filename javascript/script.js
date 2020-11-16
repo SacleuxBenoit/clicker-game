@@ -65,8 +65,12 @@ goldDisplay.textContent = "Gold : " + gold;
                 }
                 if(npcLife <= 0){
                         npcLife = npcMaxLife;
-                        gold += 5;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
-                        goldDisplay.textContent = "Gold : " + gold;
+                        goldPlayer();
                 }
+        }
+
+        function GoldPlayer(){
+                gold += 5;
+                goldDisplay.textContent = "Gold : " + gold;
         }
