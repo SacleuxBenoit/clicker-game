@@ -12,7 +12,7 @@
         <h1>Clicker game</h1>
     </header>
 
-    <p id="goldPlayer">Gold</p>
+    <p id="goldDisplay">Gold</p>
     
     <nav class="navDamage">
         <ul>

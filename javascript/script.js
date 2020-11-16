@@ -9,7 +9,7 @@ let lifeBar = document.getElementById('lifeBar');
 
 // get Player
 
-let goldPlayer = document.getElementById('goldPlayer');
+let goldDisplay = document.getElementById('goldDisplay');
 
 // variables : Zone
 
@@ -30,7 +30,7 @@ let gold = 0;
 zone.textContent = "current zone : " + currentZone;
 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
 lifeBar.textContent = npcLife + " / " + npcMaxLife;
-goldPlayer.textContent = "Gold : " + gold;
+goldDisplay.textContent = "Gold : " + gold;
 
         function damage(){
                 let currentLife =  npcLife -= damagePlayer;
@@ -67,6 +67,6 @@ goldPlayer.textContent = "Gold : " + gold;
                         npcLife = npcMaxLife;
                         gold += 5;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
-                        goldPlayer.textContent = "Gold : " + gold;
+                        goldDisplay.textContent = "Gold : " + gold;
                 }
         }
