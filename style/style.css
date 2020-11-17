@@ -6,14 +6,10 @@ body{
   "navDamage npc . ";
 }
 
-ul{
-    list-style-type: none;
-}
-
-li{
-    border-top: 1px solid black;
+.parNav{
+    border: 1px solid black;
     height: 5em;
-    width: 15em;
+    width: 20em;
 }
 
 header{

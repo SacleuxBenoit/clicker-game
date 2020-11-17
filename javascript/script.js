@@ -32,7 +32,6 @@ nextZone.textContent = "Monster left for the next zone : " + monster + " / " + m
 lifeBar.textContent = npcLife + " / " + npcMaxLife;
 goldDisplay.textContent = "Gold : " + gold;
 
-
 // function Zone
    
         function Zone(){
@@ -41,8 +40,6 @@ goldDisplay.textContent = "Gold : " + gold;
                 zone.textContent = "current zone : " + currentZone;
                 }
         }
-
-
 
 // function NPC
 

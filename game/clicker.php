@@ -15,12 +15,12 @@
     <p id="goldDisplay">Gold</p>
     
     <nav class="navDamage">
-        <ul>
-            <li>Sort 1</li>
-            <li>Sort 2</li>
-            <li>Sort 3</li>
-            <li>Sort 4</li>
-        </ul>
+        <p class="parNav">Sort 1 <br> <button>Sort 1</button></p>
+
+        <p class="parNav">Sort 2 <br> <button>Sort 2</button></p>
+
+        <p class="parNav">Sort 3 <br> <button>Sort 3</button></p>
+
     </nav>
 
     <div class="npc">
