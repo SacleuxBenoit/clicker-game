@@ -25,6 +25,7 @@ let npcLife = npcMaxLife;
 // variables : Player
 
 let damagePlayer = 10;
+let varSmallAttack = 25;
 let gold = 0;
 
 zone.textContent = "current zone : " + currentZone;
@@ -56,6 +57,14 @@ goldDisplay.textContent = "Gold : " + gold;
 
         function damage(){
                 let currentLife =  npcLife -= damagePlayer;
+                lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                if(currentLife <= 0){
+                        monsterDead();
+                }
+        }
+
+        function smallAttack(){
+                let currentLife =  npcLife -= varSmallAttack;
                 lifeBar.textContent = currentLife + " / " + npcMaxLife;
                 if(currentLife <= 0){
                         monsterDead();

@@ -15,7 +15,7 @@
     <p id="goldDisplay">Gold</p>
     
     <nav class="navDamage">
-        <p class="parNav">Sort 1 <br> <button>Sort 1</button></p>
+        <p class="parNav">Sort 1 <br> <button onclick="smallAttack()">Sort 1</button></p>
 
         <p class="parNav">Sort 2 <br> <button>Sort 2</button></p>
 
