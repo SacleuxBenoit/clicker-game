@@ -17,7 +17,7 @@
     <nav class="navDamage">
         <p class="parNav">Sort 1 <br> <button onclick="smallAttack()">Sort 1</button></p>
 
-        <p class="parNav">Sort 2 <br> <button>Sort 2</button></p>
+        <p class="parNav">Sort 2 <br> <button onclick="bigAttack()">Sort 2</button></p>
 
         <p class="parNav">Sort 3 <br> <button>Sort 3</button></p>
 
