@@ -64,11 +64,17 @@ goldDisplay.textContent = "Gold : " + gold;
         }
 
         function smallAttack(){
-                let currentLife =  npcLife -= varSmallAttack;
-                lifeBar.textContent = currentLife + " / " + npcMaxLife;
-                if(currentLife <= 0){
-                        monsterDead();
+                if(gold >= 5){
+                        let currentLife =  npcLife -= varSmallAttack;
+                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        gold-= 5;        
+                        goldDisplay.textContent = "Gold : " + gold;
+                        
+                        if(currentLife <= 0){
+                                monsterDead();
+                        }
                 }
+
         }
 
         function GoldPlayer(min, max){
