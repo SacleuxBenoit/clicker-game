@@ -121,6 +121,10 @@ goldDisplay.textContent = "Gold : " + gold;
                 if(npcLife <= 0){
                         npcLife = npcMaxLife;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                }
+                if(currentZone >= 0 && currentZone <= 2){
                         GoldPlayer(1,3);
+                }else if(currentZone >= 3 && currentZone <= 5){
+                        GoldPlayer(4,7)
                 }
         }
