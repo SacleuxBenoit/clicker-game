@@ -15,9 +15,9 @@
     <p id="goldDisplay">Gold</p>
     
     <nav class="navDamage">
-        <p class="parNav">Sort 1 <br> <button onclick="smallAttack()">Sort 1</button></p>
+        <p class="parNav">small attack : cost 5 golds <br> <button onclick="smallAttack()">small attack</button></p>
 
-        <p class="parNav">Sort 2 <br> <button onclick="bigAttack()">Sort 2</button></p>
+        <p class="parNav">big attack : cost 12 golds <br> <button onclick="bigAttack()">big attack</button></p>
 
         <p class="parNav">Sort 3 <br> <button>Sort 3</button></p>
 
