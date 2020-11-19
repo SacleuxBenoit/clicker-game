@@ -37,7 +37,7 @@ goldDisplay.textContent = "Gold : " + gold;
 // function Zone
    
         function Zone(){
-                if(monster == monstersLeft){
+                if(monster >= monstersLeft){
                 currentZone++
                 zone.textContent = "current zone : " + currentZone;
                 }
@@ -114,7 +114,7 @@ goldDisplay.textContent = "Gold : " + gold;
 // function : else
 
         function Reset(){
-                if(monster == monstersLeft){
+                if(monster >= monstersLeft){
                         monster = 0;
                         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 }
