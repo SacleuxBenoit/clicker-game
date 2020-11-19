@@ -19,7 +19,7 @@
 
         <p class="parNav">big attack : cost 12 golds <br> <button onclick="bigAttack()">big attack</button></p>
 
-        <p class="parNav">Sort 3 <br> <button>Sort 3</button></p>
+        <p class="parNav">Reduce Monster : cost 50 golds <br> <button onclick="reduceMonster()">reduce monster</button></p>
 
     </nav>
 

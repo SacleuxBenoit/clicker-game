@@ -15,7 +15,7 @@ let goldDisplay = document.getElementById('goldDisplay');
 
 let currentZone = 1;
 let monster = 0;
-let monstersLeft = 2;
+let monstersLeft = 5;
 
 // variables : NPC
 
@@ -64,6 +64,14 @@ goldDisplay.textContent = "Gold : " + gold;
                 }
         }
 
+        function GoldPlayer(min, max){
+                let random = Math.floor((Math.random() * (max - min) + min));
+                gold += random;
+                goldDisplay.textContent = "Gold : " + gold;
+        }
+
+// Power
+
         function smallAttack(){
                 if(gold >= 5){
                         let currentLife =  npcLife -= varSmallAttack;
@@ -92,11 +100,16 @@ goldDisplay.textContent = "Gold : " + gold;
 
         }
 
-        function GoldPlayer(min, max){
-                let random = Math.floor((Math.random() * (max - min) + min));
-                gold += random;
-                goldDisplay.textContent = "Gold : " + gold;
+        function reduceMonster(){
+                if(gold >=50 && monstersLeft >= 3){
+                        monstersLeft--
+                        nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
+                        gold -= 50
+                        goldDisplay.textContent = "Gold : " + gold;
+
+                }
         }
+
 
 // function : else
 
