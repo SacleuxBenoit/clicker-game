@@ -123,6 +123,23 @@ goldDisplay.textContent = "Gold : " + gold;
                 }
         }
 
+        function IntervalReduceLife(){
+                setInterval(reduceLife, 2000)
+        }
+
+        function reduceLife(){
+                if(gold >= 5){
+                        let currentLife =  npcLife -= 10;
+                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        gold-= 5;        
+                        goldDisplay.textContent = "Gold : " + gold;
+                        
+                        if(currentLife <= 0){
+                                monsterDead();
+                        }
+                }
+        }
+
 // function : else
 
         function Reset(){

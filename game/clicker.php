@@ -15,11 +15,14 @@
     <p id="goldDisplay">Gold</p>
     
     <nav class="navDamage">
-        <p class="parNav">small attack : cost 5 golds <br> <button onclick="smallAttack()">small attack</button></p>
+        <p class="parNav">small attack : cost 5 gold <br> <button onclick="smallAttack()">small attack</button></p>
 
-        <p class="parNav">big attack : cost 12 golds <br> <button onclick="bigAttack()">big attack</button></p>
+        <p class="parNav">big attack : cost 12 gold <br> <button onclick="bigAttack()">big attack</button></p>
 
-        <p class="parNav">Reduce Monster : cost 50 golds <br> <button onclick="reduceMonster()">reduce monster</button></p>
+        <p class="parNav">Reduce Monster : cost 50 gold <br> <button onclick="reduceMonster()">reduce monster</button></p>
+
+        <p class="parNav">Reduce Life : cost 5 gold per second<br> <button onclick="IntervalReduceLife()">reduce life</button></p>
+
 
     </nav>
 
