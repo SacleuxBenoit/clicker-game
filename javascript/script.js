@@ -45,6 +45,18 @@ goldDisplay.textContent = "Gold : " + gold;
 
 // function NPC
 
+        function increaseDamageAndLife(){
+                if(currentZone >= 1 && currentZone <=2){
+                        npcMaxLife = 100;
+                        damagePlayer = 10
+                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                }else if(currentZone >= 3 && currentZone <=5){
+                        npcMaxLife = 120;
+                        damagePlayer = 12
+                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                }
+        }
+
         function monsterDead(){
                 currentLife = 0;
                 lifeBar.textContent = currentLife + " / " + npcMaxLife ;
@@ -52,6 +64,7 @@ goldDisplay.textContent = "Gold : " + gold;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 Zone();
                 Reset();
+                increaseDamageAndLife();
         }
 
 // function Player
@@ -109,7 +122,6 @@ goldDisplay.textContent = "Gold : " + gold;
 
                 }
         }
-
 
 // function : else
 
