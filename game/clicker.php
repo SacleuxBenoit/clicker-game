@@ -21,8 +21,7 @@
 
         <p class="parNav">Reduce Monster : cost 50 gold <br> <button onclick="reduceMonster()">reduce monster</button></p>
 
-        <p class="parNav">Reduce Life : cost 5 gold per second<br> <button onclick="IntervalReduceLife()">reduce life</button></p>
-
+        <p class="parNav">Reduce Life : cost 5 gold every 2 seconds<br> <button onclick="IntervalReduceLife()">reduce life</button></p>
 
     </nav>
 
