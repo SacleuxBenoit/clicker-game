@@ -27,7 +27,13 @@ let npcLife = npcMaxLife;
 let damagePlayer = 10;
 let varSmallAttack = 25;
 let varBigAttack = 75;
-let gold = 0;
+let gold = 1000;
+
+// variables : Power
+
+let IntervalReduceLife = setInterval(reduceLife, 2000);
+
+// Display text
 
 zone.textContent = "current zone : " + currentZone;
 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
@@ -123,9 +129,6 @@ goldDisplay.textContent = "Gold : " + gold;
                 }
         }
 
-        function IntervalReduceLife(){
-                setInterval(reduceLife, 2000)
-        }
 
         function reduceLife(){
                 if(gold >= 5){
@@ -139,6 +142,10 @@ goldDisplay.textContent = "Gold : " + gold;
                         }
                 }
         }
+
+        function clearIntReduceLife(){
+                clearInterval(IntervalReduceLife)
+       }
 
 // function : else
 
