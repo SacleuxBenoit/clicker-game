@@ -44,7 +44,7 @@ goldDisplay.textContent = "Gold : " + gold;
    
         function Zone(){
                 if(monster >= monstersLeft){
-                currentZone++
+                currentZone++;
                 zone.textContent = "current zone : " + currentZone;
                 }
         }
@@ -54,11 +54,11 @@ goldDisplay.textContent = "Gold : " + gold;
         function increaseDamageAndLife(){
                 if(currentZone >= 1 && currentZone <=2){
                         npcMaxLife = 100;
-                        damagePlayer = 10
+                        damagePlayer = 10;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                 }else if(currentZone >= 3 && currentZone <=5){
                         npcMaxLife = 120;
-                        damagePlayer = 12
+                        damagePlayer = 12;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                 }
         }
@@ -121,9 +121,9 @@ goldDisplay.textContent = "Gold : " + gold;
 
         function reduceMonster(){
                 if(gold >=50 && monstersLeft >= 3){
-                        monstersLeft--
+                        monstersLeft--;
                         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
-                        gold -= 50
+                        gold -= 50;
                         goldDisplay.textContent = "Gold : " + gold;
 
                 }
@@ -144,7 +144,7 @@ goldDisplay.textContent = "Gold : " + gold;
         }
 
         function clearIntReduceLife(){
-                clearInterval(IntervalReduceLife)
+                clearInterval(IntervalReduceLife);
        }
 
 // function : else
@@ -161,6 +161,6 @@ goldDisplay.textContent = "Gold : " + gold;
                 if(currentZone >= 0 && currentZone <= 2){
                         GoldPlayer(1,3);
                 }else if(currentZone >= 3 && currentZone <= 5){
-                        GoldPlayer(4,7)
+                        GoldPlayer(4,7);
                 }
         }
