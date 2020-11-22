@@ -31,7 +31,6 @@ let gold = 1000;
 
 // variables : Power
 
-let IntervalReduceLife = setInterval(reduceLife, 2000);
 
 // Display text
 
@@ -143,6 +142,9 @@ goldDisplay.textContent = "Gold : " + gold;
                 }
         }
 
+        function startIntReduceLife(){
+                IntervalReduceLife = setInterval(reduceLife, 2000)
+        }
         function clearIntReduceLife(){
                 clearInterval(IntervalReduceLife);
        }
