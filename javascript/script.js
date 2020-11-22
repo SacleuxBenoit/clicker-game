@@ -55,10 +55,24 @@ goldDisplay.textContent = "Gold : " + gold;
                         npcMaxLife = 100;
                         damagePlayer = 10;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
-                }else if(currentZone >= 3 && currentZone <=5){
+                }
+                if(currentZone >= 0 && currentZone <= 2){
+                        GoldPlayer(1,3);
+                }else if(currentZone >= 3 && currentZone <= 5){
                         npcMaxLife = 120;
                         damagePlayer = 12;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        GoldPlayer(4,7);
+                }else if(currentZone >= 6 && currentZone <= 9){
+                        npcMaxLife = 150;
+                        damagePlayer = 12;
+                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        GoldPlayer(7,10);
+                }else if(currentZone >= 10 && currentZone <= 19){
+                        npcMaxLife = 200;
+                        damagePlayer = 12;
+                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        GoldPlayer(10,19);
                 }
         }
 
@@ -159,10 +173,5 @@ goldDisplay.textContent = "Gold : " + gold;
                 if(npcLife <= 0){
                         npcLife = npcMaxLife;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
-                }
-                if(currentZone >= 0 && currentZone <= 2){
-                        GoldPlayer(1,3);
-                }else if(currentZone >= 3 && currentZone <= 5){
-                        GoldPlayer(4,7);
                 }
         }
