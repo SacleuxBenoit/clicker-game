@@ -15,7 +15,7 @@
     <div class="login">
         <h2>Login</h2>
 
-        <form action="#" method="post">
+        <form action="database/user_login_database.php" method="post">
             <p>
                 <label for="LoginEmail">Email :</label>
                 <input type="email" id="LoginEmail" name="LoginEmail">
@@ -34,7 +34,7 @@
     <div class="register">
         <h2>Register</h2>
 
-        <form action="#" method="post">
+        <form action="database/user_register_database.php" method="post">
             <p>
                 <label for="RegisterEmail">Email :</label>
                 <input type="email" id="RegisterEmail" name="RegisterEmail">
