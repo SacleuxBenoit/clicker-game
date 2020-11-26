@@ -104,6 +104,14 @@ goldDisplay.textContent = "Gold : " + gold;
 
 // Power
 
+        function damageClick(){
+                if(gold >= 15){
+                       damagePlayer += 2;
+                       gold-=15;
+                       goldDisplay.textContent = "Gold : " + gold;
+                } 
+        }
+
         function smallAttack(){
                 if(gold >= 5){
                         let currentLife =  npcLife -= varSmallAttack;
