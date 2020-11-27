@@ -11,6 +11,10 @@ let lifeBar = document.getElementById('lifeBar');
 
 let goldDisplay = document.getElementById('goldDisplay');
 
+// get Power
+
+let ButtonDamageClick = document.getElementById('ButtonDamageClick');
+
 // variables : Zone
 
 let currentZone = 1;
@@ -27,7 +31,7 @@ let npcLife = npcMaxLife;
 let damagePlayer = 10;
 let varSmallAttack = 25;
 let varBigAttack = 75;
-let gold = 1000;
+let gold = 0;
 
 // variables : Power
 
@@ -109,7 +113,9 @@ goldDisplay.textContent = "Gold : " + gold;
                        damagePlayer += 2;
                        gold-=15;
                        goldDisplay.textContent = "Gold : " + gold;
-                } 
+                }else{
+                        ButtonDamageClick.disabled = true
+                }
         }
 
         function smallAttack(){
