@@ -16,7 +16,7 @@
     
     <nav class="navDamage">
 
-        <p class="parNav">increase damage per click : cost 15 gold <br> <button onclick="damageClick()">damage click</button></p>
+        <p class="parNav">increase damage per click : cost 15 gold <br> <button onclick="damageClick()" id="ButtonDamageClick">damage click</button></p>
 
         <p class="parNav">small attack : cost 5 gold <br> <button onclick="smallAttack()">small attack</button></p>
 
