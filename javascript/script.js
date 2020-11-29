@@ -37,7 +37,7 @@ let npcLife = npcMaxLife;
 let damagePlayer = 10;
 let varSmallAttack = 25;
 let varBigAttack = 75;
-let gold = 0;
+let gold = 1000;
 
 // variables : Power
 
@@ -115,7 +115,7 @@ goldDisplay.textContent = "Gold : " + gold;
 // Power
 
         function damageClick(){
-                if(gold >= 15){
+                if(gold >= 15 && damagePlayer <= 17){
                        damagePlayer += 2;
                        gold-=15;
                        goldDisplay.textContent = "Gold : " + gold;
