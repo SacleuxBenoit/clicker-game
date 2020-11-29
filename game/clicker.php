@@ -27,6 +27,8 @@
         <p class="parNav">Reduce Life : cost 5 gold every 2 seconds<br> <button onclick="startIntReduceLife()"  id="ButtonReduceLife">reduce life</button>
             <button onclick="clearIntReduceLife()"  id="ButtonClearIntReduceLife">STOP</button>
         </p>
+        
+        <p class="parNav">Random gold : cost 10 gold <br> <button onclick="randomGold()"  id="ButtonRandomGold">random gold</button></p>
 
     </nav>
 

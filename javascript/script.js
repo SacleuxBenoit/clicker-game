@@ -14,6 +14,12 @@ let goldDisplay = document.getElementById('goldDisplay');
 // get Power
 
 let ButtonDamageClick = document.getElementById('ButtonDamageClick');
+let ButtonSmallAttack = document.getElementById('ButtonSmallAttack');
+let ButtonBigAttack = document.getElementById('ButtonBigAttack');
+let ButtonReduceMonster = document.getElementById('ButtonReduceMonster');
+let ButtonReduceLife = document.getElementById('ButtonReduceLife');
+let ButtonRandomGold = document.getElementById('ButtonRandomGold');
+
 
 // variables : Zone
 
