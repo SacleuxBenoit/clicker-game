@@ -179,9 +179,20 @@ goldDisplay.textContent = "Gold : " + gold;
         function startIntReduceLife(){
                 IntervalReduceLife = setInterval(reduceLife, 2000)
         }
+
         function clearIntReduceLife(){
                 clearInterval(IntervalReduceLife);
-       }
+        }
+
+        function GetRandomGold(max, min){
+                let randomGold = Math.floor((Math.random() * (max - min) + min));
+                gold += randomGold
+                goldDisplay.textContent = "Gold : " + gold;
+        }
+
+        function randomGold(){
+                GetRandomGold(7,15);
+        }
 
 // function : else
 
