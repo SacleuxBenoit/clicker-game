@@ -37,7 +37,8 @@
             <br> reduce the life of monsters every 2 seconds
         </p>
         
-        <p class="parNav">Random gold : cost 10 gold <br> <button onclick="randomGold()"  id="ButtonRandomGold">random gold</button></p>
+        <p class="parNav">Random gold : cost 10 gold <br> <button onclick="randomGold()"  id="ButtonRandomGold">random gold</button>
+        <br> give you between 7 and 15 gold </p>
 
     </nav>
 

@@ -191,7 +191,10 @@ goldDisplay.textContent = "Gold : " + gold;
         }
 
         function randomGold(){
-                GetRandomGold(7,15);
+                if(gold >= 10){
+                        GetRandomGold(7,15);
+                        gold -=10
+                }
         }
 
 // function : else
