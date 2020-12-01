@@ -166,10 +166,11 @@ goldDisplay.textContent = "Gold : " + gold;
         function reduceLife(){
                 if(gold >= 5){
                         let currentLife =  npcLife -= 10;
+
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        
+
                         if(currentLife <= 0){
                                 monsterDead();
                         }
@@ -177,11 +178,13 @@ goldDisplay.textContent = "Gold : " + gold;
         }
 
         function startIntReduceLife(){
+                ButtonReduceLife.disabled = true;
                 IntervalReduceLife = setInterval(reduceLife, 2000)
         }
 
         function clearIntReduceLife(){
                 clearInterval(IntervalReduceLife);
+                ButtonReduceLife.disabled = false;
         }
 
         function GetRandomGold(max, min){
