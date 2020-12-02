@@ -52,6 +52,12 @@
             <button onclick="randomGold()"  id="ButtonRandomGold">random gold</button>
             <p> give you between 7 and 15 gold </p>
         </div>
+        
+        <div class="parNav">
+            <p>Delete life : cost 100 gold</p>
+            <button onclick="DeleteLife()"  id="ButtonDeleteLife">Delete life</button>
+            <p> Reduce the maximum HP by 10 </p>
+        </div>
 
     </nav>
 
