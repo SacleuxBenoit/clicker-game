@@ -200,6 +200,15 @@ goldDisplay.textContent = "Gold : " + gold;
                 }
         }
 
+        function deleteLife(){
+                if(gold >= 100){
+                        npcMaxLife -= 10;
+                        gold -= 100;
+                        goldDisplay.textContent = "Gold : " + gold;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                }
+        }
+
 // function : else
 
         function Reset(){

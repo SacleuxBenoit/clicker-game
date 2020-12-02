@@ -55,7 +55,7 @@
         
         <div class="parNav">
             <p>Delete life : cost 100 gold</p>
-            <button onclick="DeleteLife()"  id="ButtonDeleteLife">Delete life</button>
+            <button onclick="deleteLife()"  id="ButtonDeleteLife">Delete life</button>
             <p> Reduce the maximum HP by 10 </p>
         </div>
 
