@@ -20,6 +20,9 @@ let ButtonReduceMonster = document.getElementById('ButtonReduceMonster');
 let ButtonReduceLife = document.getElementById('ButtonReduceLife');
 let ButtonRandomGold = document.getElementById('ButtonRandomGold');
 
+// get Description
+
+let descDamageClick = document.getElementById('descDamageClick');
 
 // variables : Zone
 
@@ -119,6 +122,7 @@ goldDisplay.textContent = "Gold : " + gold;
                        damagePlayer += 2;
                        gold-=15;
                        goldDisplay.textContent = "Gold : " + gold;
+                       descDamageClick.textContent = "Click damage : +" + damagePlayer;
                 }else{
                         ButtonDamageClick.disabled = true
                 }

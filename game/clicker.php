@@ -19,7 +19,7 @@
         <div class="parNav">
             <p>increase damage per click : cost 15 gold</p>
             <button onclick="damageClick()" id="ButtonDamageClick">damage click</button>
-            <p>Click damage : +2</p>
+            <p id="descDamageClick">Click damage : +2</p>
         </div>
 
         <div class="parNav">
