@@ -41,10 +41,10 @@
         </div>
 
         <div class="parNav">
-            <p>Reduce Life : cost 5</p>
+            <p>Reduce Life : cost 5 gold every 2 second</p>
                 <button onclick="startIntReduceLife()"  id="ButtonReduceLife">reduce life</button>
                 <button onclick="clearIntReduceLife()"  id="ButtonClearIntReduceLife">STOP</button>
-                <p> reduce the life of monsters every 2 seconds </p>
+                <p> reduce the life of monsters every 2 second </p>
         </div>
 
         <div class="parNav">
