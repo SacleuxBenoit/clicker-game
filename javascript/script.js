@@ -23,6 +23,12 @@ let ButtonRandomGold = document.getElementById('ButtonRandomGold');
 // get Description
 
 let descDamageClick = document.getElementById('descDamageClick');
+let descSmallAttack = document.getElementById('descSmallAttack');
+let descBigAttack = document.getElementById('descBigAttack');
+let descReduceMonster = document.getElementById('descReduceMonster');
+let DescReduceLife = document.getElementById('DescReduceLife');
+let descRandomGold = document.getElementById('descRandomGold');
+let descDeleteLife = document.getElementById('descDeleteLife');
 
 // variables : Zone
 
@@ -134,7 +140,8 @@ goldDisplay.textContent = "Gold : " + gold;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        
+                        descSmallAttack.textContent = "Attack damage : " + varSmallAttack;
+
                         if(currentLife <= 0){
                                 monsterDead();
                         }
@@ -148,7 +155,8 @@ goldDisplay.textContent = "Gold : " + gold;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         gold-= 12;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        
+                        descBigAttack.textContent = "Attack damage : " + varBigAttack;
+
                         if(currentLife <= 0){
                                 monsterDead();
                         }
@@ -162,7 +170,6 @@ goldDisplay.textContent = "Gold : " + gold;
                         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                         gold -= 50;
                         goldDisplay.textContent = "Gold : " + gold;
-
                 }
         }
 
@@ -195,6 +202,7 @@ goldDisplay.textContent = "Gold : " + gold;
                 let randomGold = Math.floor((Math.random() * (max - min) + min));
                 gold += randomGold
                 goldDisplay.textContent = "Gold : " + gold;
+                descRandomGold.textContent = "Give you between " + max + " and " + min + " gold";
         }
 
         function randomGold(){
@@ -210,6 +218,7 @@ goldDisplay.textContent = "Gold : " + gold;
                         gold -= 100;
                         goldDisplay.textContent = "Gold : " + gold;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        descDeleteLife.textContent = "Reduce the maximum HP by 10"
                 }
         }
 
