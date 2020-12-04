@@ -43,7 +43,7 @@ let npcLife = npcMaxLife;
 
 // variables : Player
 
-let damagePlayer = 10;
+let damagePlayer = 5;
 let varSmallAttack = 25;
 let varBigAttack = 75;
 let gold = 1000;
@@ -72,24 +72,18 @@ goldDisplay.textContent = "Gold : " + gold;
         function increaseDamageAndLife(){
                 if(currentZone >= 1 && currentZone <=2){
                         npcMaxLife = 100;
-                        damagePlayer = 10;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
-                }
-                if(currentZone >= 0 && currentZone <= 2){
                         GoldPlayer(1,3);
                 }else if(currentZone >= 3 && currentZone <= 5){
                         npcMaxLife = 120;
-                        damagePlayer = 12;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         GoldPlayer(4,7);
                 }else if(currentZone >= 6 && currentZone <= 9){
                         npcMaxLife = 150;
-                        damagePlayer = 12;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         GoldPlayer(7,10);
                 }else if(currentZone >= 10 && currentZone <= 19){
-                        npcMaxLife = 200;
-                        damagePlayer = 12;
+                        npcMaxLife = 250;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         GoldPlayer(10,19);
                 }
@@ -125,10 +119,10 @@ goldDisplay.textContent = "Gold : " + gold;
 
         function damageClick(){
                 if(gold >= 15 && damagePlayer <= 17){
-                       damagePlayer += 2;
+                       damagePlayer += 1;
                        gold-=15;
                        goldDisplay.textContent = "Gold : " + gold;
-                       descDamageClick.textContent = "Click damage : +" + damagePlayer;
+                       descDamageClick.textContent = "Click damage : " + damagePlayer;
                 }else{
                         ButtonDamageClick.disabled = true
                 }
@@ -146,7 +140,6 @@ goldDisplay.textContent = "Gold : " + gold;
                                 monsterDead();
                         }
                 }
-
         }
 
         function bigAttack(){
@@ -161,7 +154,6 @@ goldDisplay.textContent = "Gold : " + gold;
                                 monsterDead();
                         }
                 }
-
         }
 
         function reduceMonster(){
@@ -172,7 +164,6 @@ goldDisplay.textContent = "Gold : " + gold;
                         goldDisplay.textContent = "Gold : " + gold;
                 }
         }
-
 
         function reduceLife(){
                 if(gold >= 5){
