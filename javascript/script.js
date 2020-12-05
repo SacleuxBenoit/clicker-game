@@ -6,6 +6,8 @@ let nextZone = document.getElementById('nextZone');
 // get NPC
 
 let lifeBar = document.getElementById('lifeBar');
+let ButtonNPC = document.getElementById('ButtonNPC')
+let ButtonBoss = document.getElementById('ButtonBoss');
 
 // get Player
 
@@ -97,6 +99,16 @@ goldDisplay.textContent = "Gold : " + gold;
                 Zone();
                 Reset();
                 increaseDamageAndLife();
+        }
+
+        function summonBoss(){
+                zone.textContent = "Current zone : ??";
+                nextZone.textContent = "Monster left for the next zone : ??/??";
+                ButtonNPC.textContent = "BOSS";
+                currentLife = 1000;
+                npcMaxLife = 1000;
+                lifeBar.textContent = currentLife + " / " + npcMaxLife
+
         }
 
 // function Player
