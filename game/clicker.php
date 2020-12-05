@@ -59,6 +59,12 @@
             <p id="descDeleteLife"> Reduce the maximum HP by 10 </p>
         </div>
 
+        <div class="parNav">
+            <p>Summon a BOSS</p>
+            <button onclick="summonBoss()"  id="ButtonBoss">Summon BOSS</button>
+            <p id="descBoss"></p>
+        </div>
+
     </nav>
 
     <div class="npc">

@@ -53,7 +53,7 @@ let gold = 1000;
 
 // Display text
 
-zone.textContent = "current zone : " + currentZone;
+zone.textContent = "Current zone : " + currentZone;
 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
 lifeBar.textContent = npcLife + " / " + npcMaxLife;
 goldDisplay.textContent = "Gold : " + gold;
@@ -63,7 +63,7 @@ goldDisplay.textContent = "Gold : " + gold;
         function Zone(){
                 if(monster >= monstersLeft){
                 currentZone++;
-                zone.textContent = "current zone : " + currentZone;
+                zone.textContent = "Current zone : " + currentZone;
                 }
         }
 
