@@ -96,7 +96,7 @@ goldDisplay.textContent = "Gold : " + gold;
                 }
         }
 
-        function monsterDead(){
+        function npcDead(){
                 currentLife = 0;
                 lifeBar.textContent = currentLife + " / " + npcMaxLife ;
                 monster++;
@@ -111,18 +111,19 @@ goldDisplay.textContent = "Gold : " + gold;
                 nextZone.textContent = "Monster left for the next zone : ??/??";
                 ButtonNPC.textContent = "BOSS";
                 lifeBar.textContent = bossLife + " / " + bossMaxLife
+                ButtonNPC.value = "boss"
         }
 
 // function Player
 
         function damage(){
-                if(ButtonNPC == "NPC"){
+                if(ButtonNPC.value == "npc"){
                         let currentLife =  npcLife -= damagePlayer;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         if(currentLife <= 0){
-                                monsterDead();
+                                npcDead();
                         }
-                }else{
+                }else if(ButtonNPC.value == "boss"){
                         let bossCurrentLife = bossLife -= damagePlayer;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife
                 }
@@ -156,7 +157,7 @@ goldDisplay.textContent = "Gold : " + gold;
                         descSmallAttack.textContent = "Attack damage : " + varSmallAttack;
 
                         if(currentLife <= 0){
-                                monsterDead();
+                                npcDead();
                         }
                 }
         }
@@ -170,7 +171,7 @@ goldDisplay.textContent = "Gold : " + gold;
                         descBigAttack.textContent = "Attack damage : " + varBigAttack;
 
                         if(currentLife <= 0){
-                                monsterDead();
+                                npcDead();
                         }
                 }
         }
@@ -193,7 +194,7 @@ goldDisplay.textContent = "Gold : " + gold;
                         goldDisplay.textContent = "Gold : " + gold;
 
                         if(currentLife <= 0){
-                                monsterDead();
+                                npcDead();
                         }
                 }
         }
