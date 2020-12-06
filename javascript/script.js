@@ -43,6 +43,11 @@ let monstersLeft = 5;
 let npcMaxLife = 100;
 let npcLife = npcMaxLife;
 
+// variables : Boss
+
+let bossMaxLife = 1000;
+let bossLife = bossMaxLife;
+
 // variables : Player
 
 let damagePlayer = 5;
@@ -105,19 +110,21 @@ goldDisplay.textContent = "Gold : " + gold;
                 zone.textContent = "Current zone : ??";
                 nextZone.textContent = "Monster left for the next zone : ??/??";
                 ButtonNPC.textContent = "BOSS";
-                currentLife = 1000;
-                npcMaxLife = 1000;
-                lifeBar.textContent = currentLife + " / " + npcMaxLife
-
+                lifeBar.textContent = bossLife + " / " + bossMaxLife
         }
 
 // function Player
 
         function damage(){
-                let currentLife =  npcLife -= damagePlayer;
-                lifeBar.textContent = currentLife + " / " + npcMaxLife;
-                if(currentLife <= 0){
-                        monsterDead();
+                if(ButtonNPC == "NPC"){
+                        let currentLife =  npcLife -= damagePlayer;
+                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        if(currentLife <= 0){
+                                monsterDead();
+                        }
+                }else{
+                        let bossCurrentLife = bossLife -= damagePlayer;
+                        lifeBar.textContent = bossLife + " / " + bossMaxLife
                 }
         }
 
