@@ -271,6 +271,9 @@ goldDisplay.textContent = "Gold : " + gold;
                         goldDisplay.textContent = "Gold : " + gold;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         descDeleteLife.textContent = "Reduce the maximum HP by 10"
+                if(npcLife >= npcMaxLife)
+                        npcLife -=10
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
                 }
         }
 
