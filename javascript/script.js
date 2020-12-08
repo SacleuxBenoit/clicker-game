@@ -102,7 +102,7 @@ goldDisplay.textContent = "Gold : " + gold;
                 monster++;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 Zone();
-                Reset();
+                npcReset();
                 increaseDamageAndLife();
         }
 
@@ -111,8 +111,9 @@ goldDisplay.textContent = "Gold : " + gold;
                 lifeBar.textContent = bossCurrentLife + " / " + bossMaxLife ;
                 monster++;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
+                ButtonNPC.textContent = "PNJ"
                 Zone();
-                Reset();
+                npcReset();
         }
 
         function summonBoss(){
@@ -279,7 +280,7 @@ goldDisplay.textContent = "Gold : " + gold;
 
 // function : else
 
-        function Reset(){
+        function npcReset(){
                 if(monster >= monstersLeft){
                         monster = 0;
                         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
