@@ -43,11 +43,6 @@ let monstersLeft = 5;
 let npcMaxLife = 100;
 let npcLife = npcMaxLife;
 
-// variables : Boss
-
-let bossMaxLife = 1000;
-let bossLife = bossMaxLife;
-
 // variables : Player
 
 let damagePlayer = 5;
@@ -117,6 +112,8 @@ goldDisplay.textContent = "Gold : " + gold;
         }
 
         function summonBoss(){
+                bossMaxLife = 1000;
+                bossLife = bossMaxLife;
                 zone.textContent = "Current zone : ??";
                 nextZone.textContent = "Monster left for the next zone : ??/??";
                 ButtonNPC.textContent = "BOSS";
@@ -266,7 +263,7 @@ goldDisplay.textContent = "Gold : " + gold;
         }
 
         function deleteLife(){
-                if(gold >= 100){
+                if(gold >= 100 && npcMaxLife >=50){
                         npcMaxLife -= 10;
                         gold -= 100;
                         goldDisplay.textContent = "Gold : " + gold;
@@ -301,5 +298,7 @@ goldDisplay.textContent = "Gold : " + gold;
                         bossMaxLife = npcMaxLife
                         lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         zone.textContent = "Current zone : " + currentZone;
+                        gold+= 500;
+                        goldDisplay.textContent = "Gold : " + gold;
                 }
         }
