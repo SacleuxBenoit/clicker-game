@@ -81,11 +81,15 @@ goldDisplay.textContent = "Gold : " + gold;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         GoldPlayer(4,7);
                 }else if(currentZone >= 6 && currentZone <= 9){
-                        npcMaxLife = 150;
+                        npcMaxLife = 180;
+                        varSmallAttack = 30;
+                        varBigAttack = 80;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         GoldPlayer(7,10);
                 }else if(currentZone >= 10 && currentZone <= 19){
-                        npcMaxLife = 250;
+                        npcMaxLife = 280;
+                        varSmallAttack = 45;
+                        varBigAttack = 90;
                         lifeBar.textContent = currentLife + " / " + npcMaxLife;
                         GoldPlayer(10,19);
                 }
