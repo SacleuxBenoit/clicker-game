@@ -117,12 +117,15 @@ goldDisplay.textContent = "Gold : " + gold;
 
         function summonBoss(){
                 bossMaxLife = 1000;
+                gold-=200
                 bossLife = bossMaxLife;
                 zone.textContent = "Current zone : ??";
                 nextZone.textContent = "Monster left for the next zone : ??/??";
                 ButtonNPC.textContent = "BOSS";
                 lifeBar.textContent = bossLife + " / " + bossMaxLife
                 ButtonNPC.value = "boss"
+                goldDisplay.textContent = "Gold : " + gold;
+                ButtonBoss.disabled = true;
         }
 
 // function Player
@@ -278,7 +281,7 @@ goldDisplay.textContent = "Gold : " + gold;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                 }else if(ButtonNPC.value == "boss" && gold >= 100 && bossMaxLife >=500){
                         bossMaxLife -= 10;
-                        gold -= 100;
+                        gold -= 40;
                         goldDisplay.textContent = "Gold : " + gold;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife;
                 if(bossLife >= bossMaxLife)
@@ -312,5 +315,6 @@ goldDisplay.textContent = "Gold : " + gold;
                         zone.textContent = "Current zone : " + currentZone;
                         gold+= 500;
                         goldDisplay.textContent = "Gold : " + gold;
+                        ButtonBoss.disabled = false;
                 }
         }
