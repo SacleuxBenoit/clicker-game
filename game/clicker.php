@@ -67,6 +67,12 @@
 
     </nav>
 
+    <nav id="rightNav">
+        <p>
+            <button>Dark mode</button>
+        </p>
+    </nav>
+
     <div class="npc">
 
         <p id="zone"></p>

@@ -2,8 +2,8 @@ body{
   margin: 1.3em;
   display: grid;
   grid-template-areas: 
-  ". header . "
-  "navDamage npc . ";
+  ". header rightNav"
+  "navDamage npc rightNav ";
 }
 
 .parNav{
@@ -21,4 +21,8 @@ header{
 
 .npc{
     grid-area: npc;
+}
+
+.rightNav{
+    grid-area: rightNav;
 }
