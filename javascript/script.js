@@ -31,6 +31,7 @@ let descReduceMonster = document.getElementById('descReduceMonster');
 let DescReduceLife = document.getElementById('DescReduceLife');
 let descRandomGold = document.getElementById('descRandomGold');
 let descDeleteLife = document.getElementById('descDeleteLife');
+let descBoss = document.getElementById('descBoss')
 
 // variables : Zone
 
@@ -55,10 +56,15 @@ let gold = 1000;
 
 // Display text
 
-zone.textContent = "Current zone : " + currentZone;
-nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
-lifeBar.textContent = npcLife + " / " + npcMaxLife;
-goldDisplay.textContent = "Gold : " + gold;
+function displayText(){
+        zone.textContent = "Current zone : " + currentZone;
+        nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
+        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+        descBoss.textContent = "cost : 200 gold"
+        goldDisplay.textContent = "Gold : " + gold;
+}
+
+displayText();
 
 // function Zone
    
