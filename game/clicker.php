@@ -69,7 +69,7 @@
 
     <nav id="rightNav">
         <p>
-            <button>Dark mode</button>
+            <button onclick="darkMode()">Dark mode</button>
         </p>
     </nav>
 

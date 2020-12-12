@@ -21,6 +21,7 @@ let ButtonBigAttack = document.getElementById('ButtonBigAttack');
 let ButtonReduceMonster = document.getElementById('ButtonReduceMonster');
 let ButtonReduceLife = document.getElementById('ButtonReduceLife');
 let ButtonRandomGold = document.getElementById('ButtonRandomGold');
+let ButtonDeleteLife = document.getElementById('ButtonDeleteLife');
 
 // get Description
 
@@ -132,6 +133,8 @@ displayText();
                 ButtonNPC.value = "boss"
                 goldDisplay.textContent = "Gold : " + gold;
                 ButtonBoss.disabled = true;
+                ButtonReduceMonster.disabled = true;
+                ButtonDeleteLife.disabled = true;
         }
 
 // function Player
@@ -321,5 +324,7 @@ displayText();
                         gold+= 500;
                         goldDisplay.textContent = "Gold : " + gold;
                         ButtonBoss.disabled = false;
+                        ButtonReduceMonster.disabled = false;
+                        ButtonDeleteLife.disabled = false;
                 }
         }
