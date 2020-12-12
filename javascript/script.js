@@ -288,14 +288,6 @@ displayText();
                 if(npcLife >= npcMaxLife)
                         npcLife -=10
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
-                }else if(ButtonNPC.value == "boss" && gold >= 100 && bossMaxLife >=500){
-                        bossMaxLife -= 10;
-                        gold -= 40;
-                        goldDisplay.textContent = "Gold : " + gold;
-                        lifeBar.textContent = bossLife + " / " + bossMaxLife;
-                if(bossLife >= bossMaxLife)
-                        bossLife -=10
-                        lifeBar.textContent = bossLife + " / " + bossMaxLife;
                 }
         }
 
