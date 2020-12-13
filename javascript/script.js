@@ -81,30 +81,30 @@ displayText();
         function increaseDamageAndLife(){
                 if(currentZone >= 1 && currentZone <=2){
                         npcMaxLife = 100;
-                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         GoldPlayer(1,3);
                 }else if(currentZone >= 3 && currentZone <= 5){
                         npcMaxLife = 120;
-                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         GoldPlayer(4,7);
                 }else if(currentZone >= 6 && currentZone <= 9){
                         npcMaxLife = 180;
                         varSmallAttack = 30;
                         varBigAttack = 80;
-                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         GoldPlayer(7,10);
                 }else if(currentZone >= 10 && currentZone <= 19){
                         npcMaxLife = 280;
                         varSmallAttack = 45;
                         varBigAttack = 90;
-                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         GoldPlayer(10,19);
                 }
         }
 
         function npcDead(){
-                currentLife = 0;
-                lifeBar.textContent = currentLife + " / " + npcMaxLife ;
+                npcLife = 0;
+                lifeBar.textContent = npcLife + " / " + npcMaxLife ;
                 monster++;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 Zone();
@@ -141,9 +141,9 @@ displayText();
 
         function damage(){
                 if(ButtonNPC.value == "npc"){
-                        let currentLife =  npcLife -= damagePlayer;
-                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
-                        if(currentLife <= 0){
+                        npcLife -= damagePlayer;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        if(npcLife <= 0){
                                 npcDead();
                         }
                 }else if(ButtonNPC.value == "boss"){
@@ -176,13 +176,13 @@ displayText();
 
         function smallAttack(){
                 if(gold >= 5 && ButtonNPC.value == "npc"){
-                        let currentLife =  npcLife -= varSmallAttack;
-                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        npcLife -= varSmallAttack;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
                         descSmallAttack.textContent = "Attack damage : " + varSmallAttack;
 
-                        if(currentLife <= 0){
+                        if(npcLife <= 0){
                                 npcDead();
                         }
 
@@ -201,13 +201,13 @@ displayText();
 
         function bigAttack(){
                 if(gold >= 12 && ButtonNPC.value == "npc"){
-                        let currentLife =  npcLife -= varBigAttack;
-                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        npcLife -= varBigAttack;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 12;        
                         goldDisplay.textContent = "Gold : " + gold;
                         descBigAttack.textContent = "Attack damage : " + varBigAttack;
 
-                        if(currentLife <= 0){
+                        if(npcLife <= 0){
                                 npcDead();
                         }
                 }else if(gold => 12 && ButtonNPC.value == "boss"){
@@ -234,13 +234,12 @@ displayText();
 
         function reduceLife(){
                 if(gold >= 5 && ButtonNPC.value == "npc"){
-                        let currentLife =  npcLife -= 10;
-
-                        lifeBar.textContent = currentLife + " / " + npcMaxLife;
+                        npcLife -= 10;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
 
-                        if(currentLife <= 0){
+                        if(npcLife <= 0){
                                 npcDead();
                         }
                 }else if(ButtonNPC.value == "boss"){
@@ -318,5 +317,6 @@ displayText();
                         ButtonBoss.disabled = false;
                         ButtonReduceMonster.disabled = false;
                         ButtonDeleteLife.disabled = false;
+                        increaseDamageAndLife();
                 }
         }
