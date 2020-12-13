@@ -61,7 +61,7 @@ function displayText(){
         zone.textContent = "Current zone : " + currentZone;
         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
         lifeBar.textContent = npcLife + " / " + npcMaxLife;
-        descBoss.textContent = "cost : 200 gold"
+        descBoss.textContent = "Cost : 200 gold"
         goldDisplay.textContent = "Gold : " + gold;
 }
 
@@ -310,7 +310,7 @@ displayText();
                 }
                 if(bossLife <= 0){
                         bossLife = npcLife;
-                        bossMaxLife = npcMaxLife
+                        bossMaxLife = npcMaxLife;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         zone.textContent = "Current zone : " + currentZone;
                         gold+= 500;

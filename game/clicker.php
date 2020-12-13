@@ -17,19 +17,19 @@
     <nav class="navDamage">
 
         <div class="parNav">
-            <p>increase damage per click : cost 15 gold</p>
+            <p>Increase damage per click : cost 15 gold</p>
             <button onclick="damageClick()" id="ButtonDamageClick">damage click</button>
             <p id="descDamageClick">Click damage : 5</p>
         </div>
 
         <div class="parNav">
-            <p>small attack : cost 5 gold</p>
+            <p>Small attack : cost 5 gold</p>
             <button onclick="smallAttack()" id="ButtonSmallAttack">small attack</button>
             <p id="descSmallAttack">Attack damage : 25</p>
         </div>
 
         <div class="parNav">
-            <p>big attack : cost 12 gold</p>
+            <p>Big attack : cost 12 gold</p>
             <button onclick="bigAttack()"  id="ButtonBigAttack">big attack</button>
             <p id="descBigAttack">Attack damage : 75</p>   
         </div>

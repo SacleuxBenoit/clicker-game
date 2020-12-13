@@ -9,6 +9,7 @@ body{
 .parNav{
     border: 1px solid black;
     width: 20em;
+    margin-top: 0.80em;
 }
 
 header{
