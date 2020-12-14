@@ -113,8 +113,7 @@ displayText();
         }
 
         function bossDead(){
-                bossCurrentLife = 0;
-                lifeBar.textContent = bossCurrentLife + " / " + bossMaxLife ;
+                lifeBar.textContent = bossLife + " / " + bossMaxLife ;
                 monster++;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 ButtonNPC.textContent = "PNJ"
@@ -147,9 +146,9 @@ displayText();
                                 npcDead();
                         }
                 }else if(ButtonNPC.value == "boss"){
-                        let bossCurrentLife = bossLife -= damagePlayer;
+                        bossLife -= damagePlayer;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife
-                        if(bossCurrentLife <=0){
+                        if(bossLife <=0){
                                 bossDead();
                         }
                 }
@@ -187,13 +186,13 @@ displayText();
                         }
 
                 }else if(gold >=5 && ButtonNPC.value == "boss"){
-                        let bossCurrentLife =  bossLife -= varSmallAttack;
-                        lifeBar.textContent = bossCurrentLife + " / " + bossMaxLife;
+                        bossLife -= varSmallAttack;
+                        lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
                         descSmallAttack.textContent = "Attack damage : " + varSmallAttack;
 
-                        if(bossCurrentLife <= 0){
+                        if(bossLife <= 0){
                                 bossDead();
                         }
                 }
@@ -211,13 +210,13 @@ displayText();
                                 npcDead();
                         }
                 }else if(gold => 12 && ButtonNPC.value == "boss"){
-                        let bossCurrentLife =  bossLife -= varBigAttack;
-                        lifeBar.textContent = bossCurrentLife + " / " + bossMaxLife;
+                        bossLife -= varBigAttack;
+                        lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         gold-= 12;        
                         goldDisplay.textContent = "Gold : " + gold;
                         descBigAttack.textContent = "Attack damage : " + varBigAttack;
 
-                        if(bossCurrentLife <= 0){
+                        if(bossLife <= 0){
                                 bossDead();
                         }
                 }
@@ -243,11 +242,11 @@ displayText();
                                 npcDead();
                         }
                 }else if(ButtonNPC.value == "boss"){
-                        let bossCurrentLife =  bossLife -= 10;
-                        lifeBar.textContent = bossCurrentLife + " / " + bossMaxLife;
+                        bossLife -= 10;
+                        lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        if(bossCurrentLife <= 0){
+                        if(bossLife <= 0){
                                 bossDead();
                         }
                 }
@@ -310,7 +309,7 @@ displayText();
                 if(bossLife <= 0){
                         bossLife = npcLife;
                         bossMaxLife = npcMaxLife;
-                        lifeBar.textContent = bossLife + " / " + bossMaxLife;
+                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         zone.textContent = "Current zone : " + currentZone;
                         gold+= 500;
                         goldDisplay.textContent = "Gold : " + gold;
