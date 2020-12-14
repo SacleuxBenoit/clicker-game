@@ -113,7 +113,7 @@ displayText();
         }
 
         function bossDead(){
-                lifeBar.textContent = bossLife + " / " + bossMaxLife ;
+                lifeBar.textContent = npcLife + " / " + npcMaxLife ;
                 monster++;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 ButtonNPC.textContent = "PNJ"
