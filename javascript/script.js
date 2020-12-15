@@ -48,8 +48,8 @@ let npcLife = npcMaxLife;
 // variables : Player
 
 let damagePlayer = 5;
-let varSmallAttack = 25;
-let varBigAttack = 75;
+let varSmallAttack = 5;
+let varBigAttack = 15;
 let gold = 1000;
 
 // variables : Power
@@ -174,23 +174,25 @@ displayText();
         }
 
         function smallAttack(){
+                let totalSmallAttack = varSmallAttack + damagePlayer
+
                 if(gold >= 5 && ButtonNPC.value == "npc"){
-                        npcLife -= varSmallAttack;
+                        npcLife -= totalSmallAttack ;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        descSmallAttack.textContent = "Attack damage : " + varSmallAttack;
+                        descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
 
                         if(npcLife <= 0){
                                 npcDead();
                         }
 
                 }else if(gold >=5 && ButtonNPC.value == "boss"){
-                        bossLife -= varSmallAttack;
+                        bossLife -= totalSmallAttack;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        descSmallAttack.textContent = "Attack damage : " + varSmallAttack;
+                        descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
 
                         if(bossLife <= 0){
                                 bossDead();
@@ -199,22 +201,24 @@ displayText();
         }
 
         function bigAttack(){
+                let totalBigAttack = varBigAttack + damagePlayer
+
                 if(gold >= 12 && ButtonNPC.value == "npc"){
-                        npcLife -= varBigAttack;
+                        npcLife -= totalBigAttack;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 12;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        descBigAttack.textContent = "Attack damage : " + varBigAttack;
+                        descBigAttack.textContent = "Attack damage : " + totalBigAttack;
 
                         if(npcLife <= 0){
                                 npcDead();
                         }
                 }else if(gold => 12 && ButtonNPC.value == "boss"){
-                        bossLife -= varBigAttack;
+                        bossLife -= totalBigAttack;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         gold-= 12;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        descBigAttack.textContent = "Attack damage : " + varBigAttack;
+                        descBigAttack.textContent = "Attack damage : " + totalBigAttack;
 
                         if(bossLife <= 0){
                                 bossDead();
