@@ -25,13 +25,13 @@
         <div class="parNav">
             <p>Small attack : cost 5 gold</p>
             <button onclick="smallAttack()" id="ButtonSmallAttack">small attack</button>
-            <p id="descSmallAttack">Attack damage : 25</p>
+            <p id="descSmallAttack"></p>
         </div>
 
         <div class="parNav">
             <p>Big attack : cost 12 gold</p>
             <button onclick="bigAttack()"  id="ButtonBigAttack">big attack</button>
-            <p id="descBigAttack">Attack damage : 75</p>   
+            <p id="descBigAttack"></p>   
         </div>
 
         <div class="parNav">

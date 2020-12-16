@@ -54,6 +54,9 @@ let gold = 1000;
 
 // variables : Power
 
+let totalSmallAttack = varSmallAttack + damagePlayer;
+let totalBigAttack = varBigAttack + damagePlayer;
+
 
 // Display text
 
@@ -63,6 +66,8 @@ function displayText(){
         lifeBar.textContent = npcLife + " / " + npcMaxLife;
         descBoss.textContent = "Cost : 200 gold"
         goldDisplay.textContent = "Gold : " + gold;
+        descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
+        descBigAttack.textContent = "Attack damage : " + totalBigAttack;
 }
 
 displayText();
@@ -174,7 +179,7 @@ displayText();
         }
 
         function smallAttack(){
-                let totalSmallAttack = varSmallAttack + damagePlayer
+                totalSmallAttack = varSmallAttack + damagePlayer
 
                 if(gold >= 5 && ButtonNPC.value == "npc"){
                         npcLife -= totalSmallAttack ;
@@ -201,7 +206,7 @@ displayText();
         }
 
         function bigAttack(){
-                let totalBigAttack = varBigAttack + damagePlayer
+                totalBigAttack = varBigAttack + damagePlayer
 
                 if(gold >= 12 && ButtonNPC.value == "npc"){
                         npcLife -= totalBigAttack;
