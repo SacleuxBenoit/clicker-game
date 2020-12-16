@@ -70,6 +70,20 @@ function displayText(){
         descBigAttack.textContent = "Attack damage : " + totalBigAttack;
 }
 
+function displaySmallAttack(){
+        if(gold >= 5 && ButtonNPC.value == "npc"){
+                totalSmallAttack = varSmallAttack + damagePlayer;
+                descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
+        }
+}
+
+function displayBigAttack(){
+        if(gold >= 12 && ButtonNPC.value == "npc"){
+                totalBigAttack = varBigAttack + damagePlayer;
+                descBigAttack.textContent = "Attack damage : " + totalBigAttack;
+        }
+}
+
 displayText();
 
 // function Zone
@@ -150,6 +164,7 @@ displayText();
                         if(npcLife <= 0){
                                 npcDead();
                         }
+                        displaySmallAttack()
                 }else if(ButtonNPC.value == "boss"){
                         bossLife -= damagePlayer;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife
@@ -173,21 +188,20 @@ displayText();
                        gold-=15;
                        goldDisplay.textContent = "Gold : " + gold;
                        descDamageClick.textContent = "Click damage : " + damagePlayer;
+                        displaySmallAttack();
+                        displayBigAttack();
                 }else{
                         ButtonDamageClick.disabled = true
                 }
         }
 
         function smallAttack(){
-                totalSmallAttack = varSmallAttack + damagePlayer
 
                 if(gold >= 5 && ButtonNPC.value == "npc"){
                         npcLife -= totalSmallAttack ;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
-
                         if(npcLife <= 0){
                                 npcDead();
                         }
@@ -206,18 +220,16 @@ displayText();
         }
 
         function bigAttack(){
-                totalBigAttack = varBigAttack + damagePlayer
-
                 if(gold >= 12 && ButtonNPC.value == "npc"){
                         npcLife -= totalBigAttack;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 12;        
                         goldDisplay.textContent = "Gold : " + gold;
-                        descBigAttack.textContent = "Attack damage : " + totalBigAttack;
 
                         if(npcLife <= 0){
                                 npcDead();
                         }
+
                 }else if(gold => 12 && ButtonNPC.value == "boss"){
                         bossLife -= totalBigAttack;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife;
