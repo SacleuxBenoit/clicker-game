@@ -44,7 +44,7 @@
             <p>Reduce Life : cost 5 gold every 2 second</p>
                 <button onclick="startIntReduceLife()"  id="ButtonReduceLife">reduce life</button>
                 <button onclick="clearIntReduceLife()"  id="ButtonClearIntReduceLife">STOP</button>
-                <p id="DescReduceLife"> Reduce the life of monsters every 2 second </p>
+                <p id="DescReduceLife"></p>
         </div>
 
         <div class="parNav">

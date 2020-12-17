@@ -56,6 +56,7 @@ let gold = 1000;
 
 let totalSmallAttack = varSmallAttack + damagePlayer;
 let totalBigAttack = varBigAttack + damagePlayer;
+let varReduceLife = 10;
 
 
 // Display text
@@ -68,6 +69,7 @@ function displayText(){
         goldDisplay.textContent = "Gold : " + gold;
         descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
         descBigAttack.textContent = "Attack damage : " + totalBigAttack;
+        DescReduceLife.textContent = " Reduce " + varReduceLife + " HP every 2 second "
 }
 
 function displaySmallAttack(){
