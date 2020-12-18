@@ -48,6 +48,12 @@
         </div>
 
         <div class="parNav">
+            <p>Damage reduce life</p>
+                <button onclick="damageReduceLife()"  id="ButtonDamageReduceLife">increase</button>
+                <p id="DescDamageReduceLife"></p>
+        </div>
+
+        <div class="parNav">
             <p>Random gold : cost 10 gold</p>
             <button onclick="randomGold()"  id="ButtonRandomGold">random gold</button>
             <p id="descRandomGold"> Give you between 7 and 15 gold </p>
