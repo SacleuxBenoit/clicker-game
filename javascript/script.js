@@ -20,6 +20,7 @@ let ButtonSmallAttack = document.getElementById('ButtonSmallAttack');
 let ButtonBigAttack = document.getElementById('ButtonBigAttack');
 let ButtonReduceMonster = document.getElementById('ButtonReduceMonster');
 let ButtonReduceLife = document.getElementById('ButtonReduceLife');
+let ButtonDamageReduceLife = document.getAnimations('ButtonDamageReduceLife');
 let ButtonRandomGold = document.getElementById('ButtonRandomGold');
 let ButtonDeleteLife = document.getElementById('ButtonDeleteLife');
 
@@ -70,7 +71,8 @@ function displayText(){
         goldDisplay.textContent = "Gold : " + gold;
         descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
         descBigAttack.textContent = "Attack damage : " + totalBigAttack;
-        DescReduceLife.textContent = " Reduce " + varReduceLife + " HP every 2 second "
+        DescReduceLife.textContent = " Reduce " + varReduceLife + " HP every 2 second ";
+        DescDamageReduceLife.textContent = "Damage +" + varDamageReduceLife;
 }
 
 function displaySmallAttack(){
@@ -287,9 +289,12 @@ displayText();
         }
 
         function damageReduceLife(){
-                gold -= 50;
-                varDamageReduceLife +=1;
-                goldDisplay.textContent = "Gold : " + gold;
+                if(gold >= 50){
+                        gold -= 50;
+                        varDamageReduceLife +=1;
+                        goldDisplay.textContent = "Gold : " + gold;
+                        DescDamageReduceLife.textContent = "Damage +" + varDamageReduceLife;
+                }
         }
 
         function GetRandomGold(max, min){
