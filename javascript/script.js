@@ -57,6 +57,7 @@ let gold = 1000;
 let totalSmallAttack = varSmallAttack + damagePlayer;
 let totalBigAttack = varBigAttack + damagePlayer;
 let varReduceLife = 10;
+let varDamageReduceLife = 10;
 
 
 // Display text
@@ -256,7 +257,7 @@ displayText();
 
         function reduceLife(){
                 if(gold >= 5 && ButtonNPC.value == "npc"){
-                        npcLife -= 10;
+                        npcLife -= varDamageReduceLife;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 5;        
                         goldDisplay.textContent = "Gold : " + gold;
@@ -283,6 +284,12 @@ displayText();
         function clearIntReduceLife(){
                 clearInterval(IntervalReduceLife);
                 ButtonReduceLife.disabled = false;
+        }
+
+        function damageReduceLife(){
+                gold -= 50;
+                varDamageReduceLife +=1;
+                goldDisplay.textContent = "Gold : " + gold;
         }
 
         function GetRandomGold(max, min){
