@@ -19,7 +19,7 @@
         <div class="parNav">
             <p>Increase damage per click : cost 15 gold</p>
             <button onclick="damageClick()" id="ButtonDamageClick">damage click</button>
-            <p id="descDamageClick">Click damage : 5</p>
+            <p id="descDamageClick"></p>
         </div>
 
         <div class="parNav">
@@ -41,7 +41,7 @@
         </div>
 
         <div class="parNav">
-            <p>Reduce Life : cost 5 gold every 2 second</p>
+            <p>Reduce Life : cost 5 gold every second</p>
                 <button onclick="startIntReduceLife()"  id="ButtonReduceLife">reduce life</button>
                 <button onclick="clearIntReduceLife()"  id="ButtonClearIntReduceLife">STOP</button>
                 <p id="DescReduceLife"></p>

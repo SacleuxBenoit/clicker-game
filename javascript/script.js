@@ -48,7 +48,7 @@ let npcLife = npcMaxLife;
 
 // variables : Player
 
-let damagePlayer = 5;
+let damagePlayer = 10;
 let varSmallAttack = 5;
 let varBigAttack = 15;
 let gold = 1000;
@@ -69,9 +69,10 @@ function displayText(){
         lifeBar.textContent = npcLife + " / " + npcMaxLife;
         descBoss.textContent = "Cost : 200 gold"
         goldDisplay.textContent = "Gold : " + gold;
+        descDamageClick.textContent = "Click damage : " + damagePlayer; 
         descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
         descBigAttack.textContent = "Attack damage : " + totalBigAttack;
-        DescReduceLife.textContent = " Reduce " + varReduceLife + " HP every 2 second ";
+        DescReduceLife.textContent = " Reduce " + varReduceLife + " HP every second ";
         DescDamageReduceLife.textContent = "Damage +" + varDamageReduceLife;
 }
 
@@ -280,7 +281,7 @@ displayText();
 
         function startIntReduceLife(){
                 ButtonReduceLife.disabled = true;
-                IntervalReduceLife = setInterval(reduceLife, 2000)
+                IntervalReduceLife = setInterval(reduceLife, 1000)
         }
 
         function clearIntReduceLife(){
