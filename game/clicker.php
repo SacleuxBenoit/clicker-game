@@ -48,7 +48,7 @@
         </div>
 
         <div class="parNav">
-            <p>Damage reduce life</p>
+            <p>Damage reduce life : cost 50 gold</p>
                 <button onclick="damageReduceLife()"  id="ButtonDamageReduceLife">increase</button>
                 <p id="DescDamageReduceLife"></p>
         </div>

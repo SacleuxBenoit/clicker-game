@@ -72,8 +72,8 @@ function displayText(){
         descDamageClick.textContent = "Click damage : " + damagePlayer; 
         descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
         descBigAttack.textContent = "Attack damage : " + totalBigAttack;
-        DescReduceLife.textContent = " Reduce " + varReduceLife + " HP every second ";
-        DescDamageReduceLife.textContent = "Damage +" + varDamageReduceLife;
+        DescReduceLife.textContent = " Reduce " + varReduceLife + " HP every second";
+        DescDamageReduceLife.textContent = "Increase the Reduce Life damage by : " + varDamageReduceLife;
 }
 
 function displaySmallAttack(){
@@ -294,7 +294,7 @@ displayText();
                         gold -= 50;
                         varDamageReduceLife +=1;
                         goldDisplay.textContent = "Gold : " + gold;
-                        DescDamageReduceLife.textContent = "Damage +" + varDamageReduceLife;
+                        DescDamageReduceLife.textContent = "Increase the Reduce Life damage by : " + varDamageReduceLife;
                 }
         }
 
