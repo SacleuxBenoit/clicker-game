@@ -60,20 +60,24 @@ let totalBigAttack = varBigAttack + damagePlayer;
 let varReduceLife = 10;
 let varDamageReduceLife = 10;
 
-
 // Display text
+
+function displayGold(){
+        goldDisplay.textContent = "Gold : " + gold;
+}
 
 function displayText(){
         zone.textContent = "Current zone : " + currentZone;
         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
         lifeBar.textContent = npcLife + " / " + npcMaxLife;
         descBoss.textContent = "Cost : 200 gold"
-        goldDisplay.textContent = "Gold : " + gold;
         descDamageClick.textContent = "Click damage : " + damagePlayer; 
         descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
         descBigAttack.textContent = "Attack damage : " + totalBigAttack;
         DescReduceLife.textContent = " Reduce " + varReduceLife + " HP every second";
         DescDamageReduceLife.textContent = "Increase the Reduce Life damage by : " + varDamageReduceLife;
+
+        displayGold();
 }
 
 function displaySmallAttack(){
@@ -155,10 +159,10 @@ displayText();
                 ButtonNPC.textContent = "BOSS";
                 lifeBar.textContent = bossLife + " / " + bossMaxLife
                 ButtonNPC.value = "boss"
-                goldDisplay.textContent = "Gold : " + gold;
                 ButtonBoss.disabled = true;
                 ButtonReduceMonster.disabled = true;
                 ButtonDeleteLife.disabled = true;
+                displayGold();
         }
 
 // function Player
@@ -183,7 +187,7 @@ displayText();
         function GoldPlayer(min, max){
                 let random = Math.floor((Math.random() * (max - min) + min));
                 gold += random;
-                goldDisplay.textContent = "Gold : " + gold;
+                displayGold();
         }
 
 // Power
@@ -192,10 +196,11 @@ displayText();
                 if(gold >= 15 && damagePlayer <= 17){
                        damagePlayer += 1;
                        gold-=15;
-                       goldDisplay.textContent = "Gold : " + gold;
+
                        descDamageClick.textContent = "Click damage : " + damagePlayer;
                         displaySmallAttack();
                         displayBigAttack();
+                        displayGold();
                 }else{
                         ButtonDamageClick.disabled = true
                 }
@@ -207,7 +212,7 @@ displayText();
                         npcLife -= totalSmallAttack ;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 5;        
-                        goldDisplay.textContent = "Gold : " + gold;
+                        displayGold();
                         if(npcLife <= 0){
                                 npcDead();
                         }
@@ -216,8 +221,8 @@ displayText();
                         bossLife -= totalSmallAttack;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         gold-= 5;        
-                        goldDisplay.textContent = "Gold : " + gold;
                         descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
+                        displayGold();
 
                         if(bossLife <= 0){
                                 bossDead();
@@ -230,7 +235,7 @@ displayText();
                         npcLife -= totalBigAttack;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 12;        
-                        goldDisplay.textContent = "Gold : " + gold;
+                        displayGold();
 
                         if(npcLife <= 0){
                                 npcDead();
@@ -240,7 +245,7 @@ displayText();
                         bossLife -= totalBigAttack;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         gold-= 12;        
-                        goldDisplay.textContent = "Gold : " + gold;
+                        displayGold();
                         descBigAttack.textContent = "Attack damage : " + totalBigAttack;
 
                         if(bossLife <= 0){
@@ -254,7 +259,7 @@ displayText();
                         monstersLeft--;
                         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                         gold -= 50;
-                        goldDisplay.textContent = "Gold : " + gold;
+                        displayGold();
                 }
         }
 
@@ -263,7 +268,7 @@ displayText();
                         npcLife -= varDamageReduceLife;
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         gold-= 5;        
-                        goldDisplay.textContent = "Gold : " + gold;
+                        displayGold();
 
                         if(npcLife <= 0){
                                 npcDead();
@@ -272,7 +277,7 @@ displayText();
                         bossLife -= 10;
                         lifeBar.textContent = bossLife + " / " + bossMaxLife;
                         gold-= 5;        
-                        goldDisplay.textContent = "Gold : " + gold;
+                        displayGold();
                         if(bossLife <= 0){
                                 bossDead();
                         }
@@ -293,7 +298,7 @@ displayText();
                 if(gold >= 50){
                         gold -= 50;
                         varDamageReduceLife +=1;
-                        goldDisplay.textContent = "Gold : " + gold;
+                        displayGold();
                         DescDamageReduceLife.textContent = "Increase the Reduce Life damage by : " + varDamageReduceLife;
                 }
         }
@@ -301,7 +306,7 @@ displayText();
         function GetRandomGold(max, min){
                 let randomGold = Math.floor((Math.random() * (max - min) + min));
                 gold += randomGold
-                goldDisplay.textContent = "Gold : " + gold;
+                displayGold();
                 descRandomGold.textContent = "Give you between " + max + " and " + min + " gold";
         }
 
@@ -316,7 +321,7 @@ displayText();
                 if(ButtonNPC.value == "npc" && gold >= 100 && npcMaxLife >=50){
                         npcMaxLife -= 10;
                         gold -= 100;
-                        goldDisplay.textContent = "Gold : " + gold;
+                        displayGold();
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         descDeleteLife.textContent = "Reduce the maximum HP by 10"
                 if(npcLife >= npcMaxLife)
@@ -348,7 +353,7 @@ displayText();
                         lifeBar.textContent = npcLife + " / " + npcMaxLife;
                         zone.textContent = "Current zone : " + currentZone;
                         gold+= 500;
-                        goldDisplay.textContent = "Gold : " + gold;
+                        displayGold();
                         ButtonBoss.disabled = false;
                         ButtonReduceMonster.disabled = false;
                         ButtonDeleteLife.disabled = false;
