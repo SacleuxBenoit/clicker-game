@@ -66,10 +66,13 @@ function displayGold(){
         goldDisplay.textContent = "Gold : " + gold;
 }
 
+function displayLife(){
+        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+}
+
 function displayText(){
         zone.textContent = "Current zone : " + currentZone;
         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
-        lifeBar.textContent = npcLife + " / " + npcMaxLife;
         descBoss.textContent = "Cost : 200 gold"
         descDamageClick.textContent = "Click damage : " + damagePlayer; 
         descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
@@ -78,6 +81,7 @@ function displayText(){
         DescDamageReduceLife.textContent = "Increase the Reduce Life damage by : " + varDamageReduceLife;
 
         displayGold();
+        displayLife()
 }
 
 function displaySmallAttack(){
@@ -110,30 +114,30 @@ displayText();
         function increaseDamageAndLife(){
                 if(currentZone >= 1 && currentZone <=2){
                         npcMaxLife = 100;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         GoldPlayer(1,3);
                 }else if(currentZone >= 3 && currentZone <= 5){
                         npcMaxLife = 120;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         GoldPlayer(4,7);
                 }else if(currentZone >= 6 && currentZone <= 9){
                         npcMaxLife = 180;
                         varSmallAttack = 30;
                         varBigAttack = 80;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         GoldPlayer(7,10);
                 }else if(currentZone >= 10 && currentZone <= 19){
                         npcMaxLife = 280;
                         varSmallAttack = 45;
                         varBigAttack = 90;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         GoldPlayer(10,19);
                 }
         }
 
         function npcDead(){
                 npcLife = 0;
-                lifeBar.textContent = npcLife + " / " + npcMaxLife ;
+                displayLife()
                 monster++;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 Zone();
@@ -142,7 +146,7 @@ displayText();
         }
 
         function bossDead(){
-                lifeBar.textContent = npcLife + " / " + npcMaxLife ;
+                displayLife()
                 monster++;
                 nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 ButtonNPC.textContent = "PNJ"
@@ -170,7 +174,7 @@ displayText();
         function damage(){
                 if(ButtonNPC.value == "npc"){
                         npcLife -= damagePlayer;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         if(npcLife <= 0){
                                 npcDead();
                         }
@@ -210,7 +214,7 @@ displayText();
 
                 if(gold >= 5 && ButtonNPC.value == "npc"){
                         npcLife -= totalSmallAttack ;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         gold-= 5;        
                         displayGold();
                         if(npcLife <= 0){
@@ -233,7 +237,7 @@ displayText();
         function bigAttack(){
                 if(gold >= 12 && ButtonNPC.value == "npc"){
                         npcLife -= totalBigAttack;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         gold-= 12;        
                         displayGold();
 
@@ -266,7 +270,7 @@ displayText();
         function reduceLife(){
                 if(gold >= 5 && ButtonNPC.value == "npc"){
                         npcLife -= varDamageReduceLife;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         gold-= 5;        
                         displayGold();
 
@@ -322,11 +326,11 @@ displayText();
                         npcMaxLife -= 10;
                         gold -= 100;
                         displayGold();
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         descDeleteLife.textContent = "Reduce the maximum HP by 10"
                 if(npcLife >= npcMaxLife)
                         npcLife -=10
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                 }
         }
 
@@ -338,7 +342,7 @@ displayText();
                 }
                 if(npcLife <= 0){
                         npcLife = npcMaxLife;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                 }
         }
 
@@ -350,7 +354,7 @@ displayText();
                 if(bossLife <= 0){
                         bossLife = npcLife;
                         bossMaxLife = npcMaxLife;
-                        lifeBar.textContent = npcLife + " / " + npcMaxLife;
+                        displayLife()
                         zone.textContent = "Current zone : " + currentZone;
                         gold+= 500;
                         displayGold();
