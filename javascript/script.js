@@ -74,6 +74,10 @@ function displayZone(){
         zone.textContent = "Current zone : " + currentZone;
 }
 
+function displayNextZone(){
+        nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
+}
+
 function displayText(){
         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
         descBoss.textContent = "Cost : 200 gold"
@@ -143,7 +147,7 @@ displayText();
                 npcLife = 0;
                 displayLife()
                 monster++;
-                nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
+                displayNextZone();
                 Zone();
                 npcReset();
                 increaseDamageAndLife();
@@ -152,8 +156,8 @@ displayText();
         function bossDead(){
                 displayLife()
                 monster++;
-                nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                 ButtonNPC.textContent = "PNJ"
+                displayNextZone()
                 Zone();
                 bossReset();
         }
@@ -265,8 +269,8 @@ displayText();
         function reduceMonster(){
                 if(gold >=50 && monstersLeft >= 3){
                         monstersLeft--;
-                        nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
                         gold -= 50;
+                        displayNextZone()
                         displayGold();
                 }
         }
@@ -342,7 +346,7 @@ displayText();
         function npcReset(){
                 if(monster >= monstersLeft){
                         monster = 0;
-                        nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
+                        displayNextZone()
                 }
                 if(npcLife <= 0){
                         npcLife = npcMaxLife;
@@ -353,7 +357,7 @@ displayText();
         function bossReset(){
                 if(monster >= monstersLeft){
                         monster = 0;
-                        nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
+                        displayNextZone()
                 }
                 if(bossLife <= 0){
                         bossLife = npcLife;
