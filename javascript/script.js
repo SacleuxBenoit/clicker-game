@@ -70,8 +70,11 @@ function displayLife(){
         lifeBar.textContent = npcLife + " / " + npcMaxLife;
 }
 
-function displayText(){
+function displayZone(){
         zone.textContent = "Current zone : " + currentZone;
+}
+
+function displayText(){
         nextZone.textContent = "Monster left for the next zone : " + monster + " / " + monstersLeft;
         descBoss.textContent = "Cost : 200 gold"
         descDamageClick.textContent = "Click damage : " + damagePlayer; 
@@ -81,7 +84,8 @@ function displayText(){
         DescDamageReduceLife.textContent = "Increase the Reduce Life damage by : " + varDamageReduceLife;
 
         displayGold();
-        displayLife()
+        displayLife();
+        displayZone();
 }
 
 function displaySmallAttack(){
@@ -105,7 +109,7 @@ displayText();
         function Zone(){
                 if(monster >= monstersLeft){
                 currentZone++;
-                zone.textContent = "Current zone : " + currentZone;
+                displayZone();
                 }
         }
 
@@ -354,13 +358,13 @@ displayText();
                 if(bossLife <= 0){
                         bossLife = npcLife;
                         bossMaxLife = npcMaxLife;
-                        displayLife()
-                        zone.textContent = "Current zone : " + currentZone;
                         gold+= 500;
-                        displayGold();
                         ButtonBoss.disabled = false;
                         ButtonReduceMonster.disabled = false;
                         ButtonDeleteLife.disabled = false;
+                        displayGold();
                         increaseDamageAndLife();
+                        displayLife()
+                        displayZone();
                 }
         }
