@@ -123,6 +123,10 @@ displayText();
 
 // function NPC
 
+        function increaseMonster(){
+                monster++;
+        }
+
         function increaseDamageAndLife(){
                 if(currentZone >= 1 && currentZone <=2){
                         npcMaxLife = 100;
@@ -150,7 +154,7 @@ displayText();
         function npcDead(){
                 npcLife = 0;
                 displayLife()
-                monster++;
+                increaseMonster()
                 displayNextZone();
                 Zone();
                 npcReset();
@@ -159,7 +163,7 @@ displayText();
 
         function bossDead(){
                 displayLife()
-                monster++;
+                increaseMonster()
                 ButtonNPC.textContent = "PNJ"
                 displayNextZone()
                 Zone();
