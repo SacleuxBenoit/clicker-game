@@ -70,6 +70,10 @@ function displayLife(){
         lifeBar.textContent = npcLife + " / " + npcMaxLife;
 }
 
+function displayLifeBoss(){
+        lifeBar.textContent = bossLife + " / " + bossMaxLife
+}
+
 function displayZone(){
         zone.textContent = "Current zone : " + currentZone;
 }
@@ -169,12 +173,12 @@ displayText();
                 zone.textContent = "Current zone : ??";
                 nextZone.textContent = "Monster left for the next zone : ??/??";
                 ButtonNPC.textContent = "BOSS";
-                lifeBar.textContent = bossLife + " / " + bossMaxLife
                 ButtonNPC.value = "boss"
                 ButtonBoss.disabled = true;
                 ButtonReduceMonster.disabled = true;
                 ButtonDeleteLife.disabled = true;
                 displayGold();
+                displayLifeBoss();
         }
 
 // function Player
@@ -189,7 +193,7 @@ displayText();
                         displaySmallAttack()
                 }else if(ButtonNPC.value == "boss"){
                         bossLife -= damagePlayer;
-                        lifeBar.textContent = bossLife + " / " + bossMaxLife
+                        displayLifeBoss();
                         if(bossLife <=0){
                                 bossDead();
                         }
@@ -231,7 +235,7 @@ displayText();
 
                 }else if(gold >=5 && ButtonNPC.value == "boss"){
                         bossLife -= totalSmallAttack;
-                        lifeBar.textContent = bossLife + " / " + bossMaxLife;
+                        displayLifeBoss();
                         gold-= 5;        
                         descSmallAttack.textContent = "Attack damage : " + totalSmallAttack;
                         displayGold();
@@ -255,7 +259,7 @@ displayText();
 
                 }else if(gold => 12 && ButtonNPC.value == "boss"){
                         bossLife -= totalBigAttack;
-                        lifeBar.textContent = bossLife + " / " + bossMaxLife;
+                        displayLifeBoss();
                         gold-= 12;        
                         displayGold();
                         descBigAttack.textContent = "Attack damage : " + totalBigAttack;
@@ -287,7 +291,7 @@ displayText();
                         }
                 }else if(ButtonNPC.value == "boss"){
                         bossLife -= 10;
-                        lifeBar.textContent = bossLife + " / " + bossMaxLife;
+                        displayLifeBoss();
                         gold-= 5;        
                         displayGold();
                         if(bossLife <= 0){
