@@ -3,51 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style/login_register.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Clicker game</title>
 </head>
 <body>
-<header>
-    <h1>Clicker game</h1>
-</header>
 
-    <div class="login">
-        <h2>Login</h2>
+    <header>
+        <h1>Clicker game</h1>
+    </header>
 
-        <form action="database/user_login_database.php" method="post">
-            <p>
-                <label for="LoginEmail">Email :</label>
-                <input type="email" id="LoginEmail" name="LoginEmail">
-            </p>
+    <p id="goldDisplay">Gold</p>
+    
+    <nav class="navDamage">
 
-            <p>
-                <label for="LoginPass">Password :</label>
-                <input type="password" id="LoginPass" name="LoginPass">
-            </p>
+        <div class="parNav">
+            <p>Increase damage per click : cost 15 gold</p>
+            <button onclick="damageClick()" id="ButtonDamageClick">damage click</button>
+            <p id="descDamageClick"></p>
+        </div>
 
-            <input type="submit" value="Submit">
-            
-        </form>
+        <div class="parNav">
+            <p>Small attack : cost 5 gold</p>
+            <button onclick="smallAttack()" id="ButtonSmallAttack">small attack</button>
+            <p id="descSmallAttack"></p>
+        </div>
+
+        <div class="parNav">
+            <p>Big attack : cost 12 gold</p>
+            <button onclick="bigAttack()"  id="ButtonBigAttack">big attack</button>
+            <p id="descBigAttack"></p>   
+        </div>
+
+        <div class="parNav">
+            <p>Reduce Monster : cost 50 gold</p>
+            <button onclick="reduceMonster()"  id="ButtonReduceMonster">reduce monster</button> 
+            <p id="descReduceMonster"> Reduces the maximum number of monsters (2 monster minimum )</p>
+        </div>
+
+        <div class="parNav">
+            <p>Reduce Life : cost 5 gold every second</p>
+                <button onclick="startIntReduceLife()"  id="ButtonReduceLife">reduce life</button>
+                <button onclick="clearIntReduceLife()"  id="ButtonClearIntReduceLife">STOP</button>
+                <p id="DescReduceLife"></p>
+        </div>
+
+        <div class="parNav">
+            <p>Damage reduce life : cost 50 gold</p>
+                <button onclick="damageReduceLife()"  id="ButtonDamageReduceLife">increase</button>
+                <p id="DescDamageReduceLife"></p>
+        </div>
+
+        <div class="parNav">
+            <p>Random gold : cost 10 gold</p>
+            <button onclick="randomGold()"  id="ButtonRandomGold">random gold</button>
+            <p id="descRandomGold"> Give you between 7 and 15 gold </p>
+        </div>
+        
+        <div class="parNav">
+            <p>Delete life : cost 100 gold</p>
+            <button onclick="deleteLife()"  id="ButtonDeleteLife">Delete life</button>
+            <p id="descDeleteLife"> Reduce the maximum HP by 10 </p>
+        </div>
+
+        <div class="parNav">
+            <p>Summon a BOSS</p>
+            <button onclick="summonBoss()"  id="ButtonBoss">Summon BOSS</button>
+            <p id="descBoss"></p>
+        </div>
+
+    </nav>
+
+    <nav id="rightNav">
+        <p>
+            <button onclick="darkMode()">Dark mode</button>
+        </p>
+    </nav>
+
+    <div class="npc">
+
+        <p id="zone"></p>
+        <p id="nextZone">Monster left for the next zone</p>
+
+        <button id="ButtonNPC" onclick="damage()" value="npc">NPC</button>
+
+        <p id="lifeBar"></p>
+
     </div>
 
-    <div class="register">
-        <h2>Register</h2>
-
-        <form action="database/user_register_database.php" method="post">
-            <p>
-                <label for="RegisterEmail">Email :</label>
-                <input type="email" id="RegisterEmail" name="RegisterEmail">
-            </p>
-
-            <p>
-                <label for="RegisterPass">Password :</label>
-                <input type="password" id="RegisterPass" name="RegisterPass">
-            </p>
-
-            <input type="submit" value="Submit">
-            
-        </form>
-    </div>
+    <script src="../javascript/script.js"></script>
 </body>
 </html>
