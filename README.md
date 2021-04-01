@@ -4,6 +4,8 @@ Basic clicker game
 
 # Stack
 
-*.  Html
-*.  Css
-*.  Js
+*   Html
+
+*   Css
+
+*   Js
