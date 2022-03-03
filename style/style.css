@@ -1,9 +1,11 @@
 body{
-  margin: 1.3em;
-  display: grid;
-  grid-template-areas: 
-  ". header rightNav"
-  "navDamage npc rightNav ";
+    margin: 0;
+    padding: 0;
+    margin: 1.3em;
+    display: grid;
+    grid-template-areas: 
+    ". header rightNav"
+    "navDamage npc rightNav ";
 }
 
 .parNav{

@@ -350,7 +350,7 @@ displayText();
                 }
         }
 
-// function : reset
+// function reset
         function npcReset(){
                 if(monster >= monstersLeft){
                         monster = 0;
