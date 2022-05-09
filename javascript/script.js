@@ -35,6 +35,8 @@ let descRandomGold = document.getElementById('descRandomGold');
 let descDeleteLife = document.getElementById('descDeleteLife');
 let descBoss = document.getElementById('descBoss')
 
+// stop intervall
+let ButtonClearIntReduceLife = document.getElementById('ButtonClearIntReduceLife');
 // variables : Zone
 
 let currentZone = 1;
@@ -306,12 +308,14 @@ displayText();
 
         function startIntReduceLife(){
                 ButtonReduceLife.disabled = true;
+                ButtonClearIntReduceLife.disabled = false;
                 IntervalReduceLife = setInterval(reduceLife, 1000)
         }
 
         function clearIntReduceLife(){
                 clearInterval(IntervalReduceLife);
                 ButtonReduceLife.disabled = false;
+                ButtonClearIntReduceLife.disabled = true;
         }
 
         function damageReduceLife(){
