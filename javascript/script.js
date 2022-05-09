@@ -53,7 +53,7 @@ let npcLife = npcMaxLife;
 let damagePlayer = 10;
 let varSmallAttack = 5;
 let varBigAttack = 15;
-let gold = 1000;
+let gold = 100;
 
 // variables : Power
 
@@ -66,6 +66,7 @@ let varDamageReduceLife = 10;
 
 function displayGold(){
         goldDisplay.textContent = "Gold : " + gold;
+        noGoldLeft();
 }
 
 function displayLife(){
@@ -173,18 +174,21 @@ displayText();
         }
 
         function summonBoss(){
-                bossMaxLife = 1000;
-                gold-=200
-                bossLife = bossMaxLife;
-                zone.textContent = "Current zone : ??";
-                nextZone.textContent = "Monster left for the next zone : ??/??";
-                ButtonNPC.textContent = "BOSS";
-                ButtonNPC.value = "boss"
-                ButtonBoss.disabled = true;
-                ButtonReduceMonster.disabled = true;
-                ButtonDeleteLife.disabled = true;
-                displayGold();
-                displayLifeBoss();
+                if(gold >= 200){
+                        bossMaxLife = 1000;
+                        gold-=200
+                        bossLife = bossMaxLife;
+                        zone.textContent = "Current zone : ??";
+                        nextZone.textContent = "Monster left for the next zone : ??/??";
+                        ButtonNPC.textContent = "BOSS";
+                        ButtonNPC.value = "boss"
+                        ButtonBoss.disabled = true;
+                        ButtonReduceMonster.disabled = true;
+                        ButtonDeleteLife.disabled = true;
+                        displayGold();
+                        displayLifeBoss();
+                }
+
         }
 
 // function Player
