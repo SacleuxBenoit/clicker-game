@@ -188,7 +188,6 @@ displayText();
                         displayGold();
                         displayLifeBoss();
                 }
-
         }
 
 // function Player
