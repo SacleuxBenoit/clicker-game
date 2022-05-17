@@ -134,23 +134,23 @@ displayText();
                 if(currentZone >= 1 && currentZone <=2){
                         npcMaxLife = 100;
                         displayLife()
-                        GoldPlayer(1,3);
+                        GoldPlayer(1,5);
                 }else if(currentZone >= 3 && currentZone <= 5){
                         npcMaxLife = 120;
                         displayLife()
-                        GoldPlayer(4,7);
+                        GoldPlayer(4,10);
                 }else if(currentZone >= 6 && currentZone <= 9){
                         npcMaxLife = 180;
                         varSmallAttack = 30;
                         varBigAttack = 80;
                         displayLife()
-                        GoldPlayer(7,10);
+                        GoldPlayer(9,15);
                 }else if(currentZone >= 10 && currentZone <= 19){
                         npcMaxLife = 280;
                         varSmallAttack = 45;
                         varBigAttack = 90;
                         displayLife()
-                        GoldPlayer(10,19);
+                        GoldPlayer(10,30);
                 }
         }
 
