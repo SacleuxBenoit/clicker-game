@@ -1,42 +1,42 @@
 // get Zone
 
-let zone = document.getElementById('zone');
-let nextZone = document.getElementById('nextZone');
+const zone = document.getElementById('zone');
+const nextZone = document.getElementById('nextZone');
 
 // get NPC
 
-let lifeBar = document.getElementById('lifeBar');
-let ButtonNPC = document.getElementById('ButtonNPC')
-let ButtonBoss = document.getElementById('ButtonBoss');
+const lifeBar = document.getElementById('lifeBar');
+const ButtonNPC = document.getElementById('ButtonNPC')
+const ButtonBoss = document.getElementById('ButtonBoss');
 
 // get Player
 
-let goldDisplay = document.getElementById('goldDisplay');
+const goldDisplay = document.getElementById('goldDisplay');
 
 // get Power
 
-let ButtonDamageClick = document.getElementById('ButtonDamageClick');
-let ButtonSmallAttack = document.getElementById('ButtonSmallAttack');
-let ButtonBigAttack = document.getElementById('ButtonBigAttack');
-let ButtonReduceMonster = document.getElementById('ButtonReduceMonster');
-let ButtonReduceLife = document.getElementById('ButtonReduceLife');
-let ButtonDamageReduceLife = document.getAnimations('ButtonDamageReduceLife');
-let ButtonRandomGold = document.getElementById('ButtonRandomGold');
-let ButtonDeleteLife = document.getElementById('ButtonDeleteLife');
+const ButtonDamageClick = document.getElementById('ButtonDamageClick');
+const ButtonSmallAttack = document.getElementById('ButtonSmallAttack');
+const ButtonBigAttack = document.getElementById('ButtonBigAttack');
+const ButtonReduceMonster = document.getElementById('ButtonReduceMonster');
+const ButtonReduceLife = document.getElementById('ButtonReduceLife');
+const ButtonDamageReduceLife = document.getAnimations('ButtonDamageReduceLife');
+const ButtonRandomGold = document.getElementById('ButtonRandomGold');
+const ButtonDeleteLife = document.getElementById('ButtonDeleteLife');
 
 // get Description
 
-let descDamageClick = document.getElementById('descDamageClick');
-let descSmallAttack = document.getElementById('descSmallAttack');
-let descBigAttack = document.getElementById('descBigAttack');
-let descReduceMonster = document.getElementById('descReduceMonster');
-let DescReduceLife = document.getElementById('DescReduceLife');
-let descRandomGold = document.getElementById('descRandomGold');
-let descDeleteLife = document.getElementById('descDeleteLife');
-let descBoss = document.getElementById('descBoss')
+const descDamageClick = document.getElementById('descDamageClick');
+const descSmallAttack = document.getElementById('descSmallAttack');
+const descBigAttack = document.getElementById('descBigAttack');
+const descReduceMonster = document.getElementById('descReduceMonster');
+const DescReduceLife = document.getElementById('DescReduceLife');
+const descRandomGold = document.getElementById('descRandomGold');
+const descDeleteLife = document.getElementById('descDeleteLife');
+const descBoss = document.getElementById('descBoss')
 
 // stop intervall
-let ButtonClearIntReduceLife = document.getElementById('ButtonClearIntReduceLife');
+const ButtonClearIntReduceLife = document.getElementById('ButtonClearIntReduceLife');
 // variables : Zone
 
 let currentZone = 1;
